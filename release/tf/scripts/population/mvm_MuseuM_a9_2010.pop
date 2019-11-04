@@ -1,0 +1,920 @@
+#base robot_giant.pop
+#base robot_standard.pop
+#base robot_MuseuMV_Special.pop
+#base robot_MuseuMV_Standard.pop
+//Templated from existing Valve Intermediate MVM mission
+
+WaveSchedule
+{
+
+	StartingCurrency		400
+	RespawnWaveTime 7
+	CanBotsAttackWhileInSpawnRoom no
+	Advanced	1
+
+	Mission // Sentry buster
+	{
+		Objective DestroySentries
+
+		InitialCooldown 25
+		Where spawnbot_mission_sentrybuster
+		BeginAtWave 1
+		RunForThisManyWaves 6
+
+		CooldownTime 20          
+
+		TFBot
+		{
+			Template T_TFBot_SentryBuster
+		}
+	}
+	
+	Mission // Spy - wave 3
+	{
+		Objective Spy  
+
+		InitialCooldown 10
+		Where spawnbot_mission_spy
+		BeginAtWave 3
+		RunForThisManyWaves 1
+		CooldownTime 35
+		DesiredCount 3
+
+		TFBot
+		{
+			Template T_TFBot_SniperVsSpy_AmbassadorDeadRinger_Spy
+			Skill Expert
+		}
+	}
+	
+	Mission // Spy - wave 3
+	{
+		Objective Spy  
+
+		InitialCooldown 10
+		Where spawnbot_mission_spy
+		BeginAtWave 5
+		RunForThisManyWaves 1
+		CooldownTime 10
+		DesiredCount 3
+
+		TFBot
+		{
+			Template T_TFBot_Mannconomy_Saharan_Spy
+			Skill Expert
+		}
+	}
+	
+	 Mission // Sniper - wave 5
+	 {
+		 Objective Sniper
+
+		 InitialCooldown 20
+		 Where spawnbot_mission_sniper
+		 BeginAtWave 5
+		 RunForThisManyWaves 1
+		 CooldownTime 25
+		 DesiredCount 2
+
+		 TFBot
+		 {
+			Template T_TFBot_Mannconomy_CrocOStyle_Sniper
+			Skill Expert
+		 }
+	 }
+	 
+	Mission // Engineer wave 4
+	{
+		Objective Engineer  
+
+		InitialCooldown 30
+		Where spawnbot
+		BeginAtWave 4
+		RunForThisManyWaves 1
+		CooldownTime 45
+		DesiredCount 1
+
+		TFBot
+		{
+			Template T_TFBot_Engineer_Sentry_Teleporter
+			TeleportWhere spawnbot
+			Attributes TeleportToHint
+			Health 600
+			Item "Golden Wrench"
+			Item "Texas Ten Gallon"
+		}
+	}	 
+	 
+	 
+	 
+	 
+	//WAVE 1 // Scout update + Sniper vs Spy - $600
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+
+		WaveSpawn // 50 Sandman Scouts
+		{				
+			Where spawnbot
+			Name "w1_01"
+			TotalCount 50
+			MaxActive 14
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 3
+			TotalCurrency 50
+			
+			TFBot
+			{
+				Template T_TFBot_ScoutUpdate_Sandman_Scout
+			}
+		}
+		
+		WaveSpawn
+		{				
+			Where spawnbot_top
+			Name "w1_02"
+			TotalCount 16
+			MaxActive 4
+			SpawnCount 4
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 5
+			TotalCurrency 100
+			
+			TFBot
+			{
+				Template T_TFBot_PyroUpdate_Pyro
+				Skill Easy
+			}
+		}
+		
+		WaveSpawn
+		{	
+			Name "w1_03"
+			
+			Where spawnbot_left
+			Where Spawnbot_right
+			TotalCount 24
+			MaxActive 12
+			SpawnCount 6
+			WaitBeforeStarting 25
+			WaitBetweenSpawns 1
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_ScoutUpdate_FAN_Scout
+			}
+		}
+		
+		WaveSpawn 
+		{	
+			WaitForAllSpawned "w1_03"
+			
+			Where spawnbot_giant
+			TotalCount 8
+			MaxActive 8
+			SpawnCount 8
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 0
+			TotalCurrency 150
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_SniperVsSpy_Huntsman_Sniper_Giant_Intermediate
+				}
+				TFBot
+				{
+					Template T_TFBot_SniperVsSpy_Huntsman_Sniper                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_SniperVsSpy_Huntsman_Sniper                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_SniperVsSpy_Huntsman_Sniper                                        
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout                                            
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout                                            
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Bonk_Scout                                            
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Bonk_Scout                                            
+				}
+			}
+		}
+		WaveSpawn 
+		{	
+			WaitForAllSpawned "w1_03"
+			
+			Where spawnbot_giant
+			TotalCount 5
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 45
+			WaitBetweenSpawns 0
+			TotalCurrency 150
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout_Giant_Intermediate
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Bonk_Scout                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Bonk_Scout                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout                                            
+				}
+			}
+		}
+	}
+	
+	//WAVE 2 - Revisit 2007, hint toward War - $900
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn // 50 Sandman Scouts
+		{				
+			Where spawnbot_left
+			Where spawnbot_right
+			Where spawnbot_top
+			Name "w2_01"
+			TotalCount 10
+			MaxActive 10
+			SpawnCount 2
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 1
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_ScoutUpdate_Sandman_Scout_Special
+			}
+		}
+		
+
+		WaveSpawn //Giant 1
+		{	
+
+			Where spawnbot_giant
+			Name "w2_02"
+			TotalCount 5
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 0
+			TotalCurrency 150
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Pyro                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Pyro                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro                                            
+				}
+			}
+		}
+
+		WaveSpawn //Giant 2
+		{	
+
+			Where spawnbot_giant
+			Name "w2_03"
+			WaitForAllDead "w2_02"
+			TotalCount 5
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 0
+			TotalCurrency 200
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy                                         
+				}
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy                                         
+				}
+				TFBot
+				{
+					Template T_TFBot_NonBeta_Heavy                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_NonBeta_Heavy                                            
+				}
+			}
+		}
+
+		WaveSpawn //Giant 3
+		{	
+
+			Where spawnbot_giant
+			Name "w2_04"
+			WaitforAllDead "w2_03"
+			TotalCount 5
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 0
+			TotalCurrency 200
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman_Giant_Intermediate
+				}
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman                                         
+				}
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman                                         
+				}
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman                                          
+				}
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman                                            
+				}
+			}
+		}		
+
+		WaveSpawn // 50 Huntsman Snipers
+		{				
+			Where spawnbot
+			Where spawnbot_top
+			WaitForAllSpawned "w2_01"
+			TotalCount 40
+			MaxActive 20
+			SpawnCount 3
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_SniperVsSpy_Huntsman_Sniper
+				Skill Normal
+			}
+		}	
+	}
+	
+	//WAVE 3 //War! Giant DH spammer with support sollies, demoknights, and medics - $600
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn 
+		{				
+			Where spawnbot_giant
+			TotalCount 30
+			MaxActive 20
+			SpawnCount 10
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 35
+			TotalCurrency 600
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_War_DirectHit_Soldier_Giant_Intermediate
+				}
+				TFBot
+				{
+					Template T_TFBot_War_DirectHitBuffBanner_Soldier
+				}
+				TFBot
+				{
+					Template T_TFBot_War_DirectHitBuffBanner_Soldier
+				}
+				TFBot
+				{
+					Template T_TFBot_War_DirectHitBuffBanner_Soldier
+				}
+				TFBot
+				{
+					Template T_TFBot_War_DirectHitBuffBanner_Soldier
+				}
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+				}
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+				}
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight   
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_BigHeal   
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_BigHeal   
+				}
+			}
+		}	
+	}
+	//WAVE 4 //Attendant Pyros and Special Delivery Scouts - $800
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn 
+		{					
+			Where spawnbot_giant
+			TotalCount 5
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 25
+			TotalCurrency 400
+			
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_GasJockey_Pyro_Giant
+				Attributes AlwaysFireWeapon
+			}
+		}	
+		WaveSpawn 
+		{						
+			Where spawnbot_giant
+			TotalCount 10
+			MaxActive 10
+			SpawnCount 1
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 7
+			TotalCurrency 400
+
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_SpecialDelivery_Scout_Giant
+			}
+		}
+	}
+	
+	//WAVE 5 // Mannconomy Part 2 - $650
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn 
+		{			
+			Name "w5_01"
+			
+			Where spawnbot_left
+			Where spawnbot_right
+			TotalCount 24
+			MaxActive 12
+			SpawnCount 3
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+			TotalCurrency 100
+			
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_Milkman_Scout
+				Skill Easy
+			}
+		}
+		WaveSpawn 
+		{						
+			Where spawnbot
+			Where spawnbot_top
+			TotalCount 20
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 1
+			TotalCurrency 50
+			
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_GRU_Heavy
+				Skill Expert
+			}
+
+
+		}
+		WaveSpawn 
+		{			
+			WaitForAllSpawned "w5_01"
+			
+			Where spawnbot_top
+			TotalCount 8
+			MaxActive 8
+			SpawnCount 2
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 0
+			TotalCurrency 50
+			
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_GasJockey_Pyro
+				Skill Easy
+			}
+		}
+		WaveSpawn 
+		{			
+			WaitForAllSpawned "w5_01"
+			
+			Where spawnbot_right
+			TotalCount 4
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 10
+			TotalCurrency 50
+			
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_TankBuster_Soldier
+				Skill Easy
+			}
+		}
+		WaveSpawn 
+		{			
+			WaitForAllSpawned "w5_01"
+			
+			Where spawnbot_left
+			TotalCount 4
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 16
+			WaitBetweenSpawns 10
+			TotalCurrency 50
+			
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_TankBuster_Soldier
+				Skill Easy
+			}
+		}
+		WaveSpawn 
+		{		
+			WaitForAllSpawned "w5_01"
+			Name "w5_02"
+			
+			Where spawnbot
+			TotalCount 40
+			MaxActive 20
+			SpawnCount 4
+			WaitBeforeStarting 25
+			WaitBetweenSpawns 1
+			TotalCurrency 50
+			
+			RandomSpawn 1
+			
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+				}
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+					Skill Easy
+				}
+			}
+		}
+		WaveSpawn 
+		{			
+			WaitForAllSpawned "w5_02"
+			
+			Where spawnbot
+			TotalCount 18
+			MaxActive 18
+			SpawnCount 18
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			TotalCurrency 100
+			
+			RandomSpawn 1
+			
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+					Tag nav_prefer_flank_right
+				}
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+					Tag nav_prefer_flank_left
+				}
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+					Skill Easy
+					Tag nav_prefer_flank_right
+				}
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+					Skill Easy
+					Tag nav_prefer_flank_left
+				}
+			}
+		}
+	}
+	
+	//WAVE 6 //Australium Christmas - $800
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn
+		{						
+			Where spawnbot_top
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 0
+			TotalCurrency 20
+			
+			TFBot
+			{
+				Template T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+			}
+		}
+		WaveSpawn
+		{						
+			Where spawnbot_left
+			Where spawnbot_right
+			TotalCount 24
+			MaxActive 12
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+			TotalCurrency 80
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_HibernatingBear_WarriorsSpirit_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_HibernatingBear_BrassBeast_Heavy
+					Skill Easy
+				}
+				TFBot
+				{
+					Class T_TFBot_AustralianChristmas_HibernatingBear_BrassBeast_Heavy
+					Skill Easy
+				}
+			}
+		}
+		
+		
+		WaveSpawn
+		{			
+			Name "w6_01"
+			
+			Where spawnbot
+			TotalCount 12
+			MaxActive 6
+			SpawnCount 2
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 5
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+			}
+		}
+		
+		WaveSpawn
+		{			
+			WaitForAllSpawned "w6_01"
+		
+			Where spawnbot
+			TotalCount 28
+			MaxActive 9
+			SpawnCount 3
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 1
+			TotalCurrency 100
+			
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+					Tag nav_prefer_flank_right
+				}
+				TFBot
+				{
+					Template T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+					Tag nav_prefer_flank_left
+				}
+			}
+		}
+		
+		WaveSpawn 
+		{			
+			WaitforAllSpawned "w6_01"
+			
+			Where spawnbot_giant
+			TotalCount 6
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 7
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_AustraliumChristmas_Demoman_Giant
+				Skill Normal
+			}
+		}
+		
+		WaveSpawn
+		{			
+			WaitForAllSpawned "w6_01"
+			
+			Where spawnbot
+			TotalCount 16
+			MaxActive 12
+			SpawnCount 4
+			WaitBeforeStarting 65
+			WaitBetweenSpawns 25
+			TotalCurrency 200
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_ExpertsOrdanace_Caber_Demoman
+				}
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_ExpertsOrdanance_LochnLoad_Demoman
+				}
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_ExpertsOrdanance_LochnLoad_Demoman
+				}
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_ExpertsOrdanance_LochnLoad_Demoman
+				}
+			}
+		}
+		WaveSpawn 
+		{			
+			WaitForAllSpawned "w6_01"
+			
+			Where spawnbot_giant
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 70
+			TotalCurrency 0
+			
+			TFBot
+			{
+				Template T_TFBot_AustraliumChristmas_BrassBeast_Heavy_Giant
+				Skill Normal
+				Health 12000
+			}
+			
+		}
+	}
+}

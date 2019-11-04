@@ -1,0 +1,1523 @@
+WaveSchedule
+{
+	Templates 
+	{
+	
+	//T_TFBot_2013_<CLASS>_<MONEY>
+	// Bots can "spend" money equal to how much they have in the upgrade station. This is how they are built
+	// Giants receive bonuses on certain upgrades. 
+		//Damage 2x
+		//Reload speed 1.25x
+		//Fire rate 1.5x
+		//Ubercharge rate 1.5x
+		//Bleed 1.25x
+		//heal on kill 1.5x
+	
+	//Scout
+	
+		T_TFBot_2013_Scout_2500
+		{
+			Name "Scout"
+		
+			Class Scout
+			Skill Expert
+			ClassIcon mvm_scout
+			
+			Item "Ye Olde Baker Boy"
+			Item "Gold Botkiller Scattergun Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Scattergun Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 1.5 // 50% increased damage - $800
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+			}
+			ItemAttributes
+			{
+				ItemName "Ye Olde Baker Boy"
+				"attach particle effect" 14 //Scorching flames
+				"set item tint RGB" 3342130 //GREEN
+			}
+			CharacterAttributes
+			{
+				"dmg taken from crit reduced" .9 // 30% Crit Resist - $150
+			}		
+		}
+
+		T_TFBot_2013_Scout_5700
+		{
+			Name "Scout"
+		
+			Class Scout
+			Skill Expert
+			ClassIcon twocities_scout
+			
+			Item "Ye Olde Baker Boy"
+			Item "Gold Botkiller Scattergun Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "Diamond Botkiller Scattergun Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 2.0 // 100% increased damage - $1600
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+				"clip size bonus" 2.5 // 150% clip size bonus - $1200
+				"hidden primary max ammo bonus" 1.5 // 50% max ammo bonus - $250
+				"projectile penetration" 1 // projectile pentration - $400
+				"heal on kill" 75 // 75 HP heal on kill - $600
+			}
+			ItemAttributes
+			{
+				ItemName "Ye Olde Baker Boy"
+				"attach particle effect" 17 // Sunbeams
+				"set item tint RGB" 16763904 //Yellow	
+			}
+		}
+
+		T_TFBot_2013_Scout_8700
+		{
+			Name "Scout"
+		
+			Class Scout
+			Skill Expert
+			ClassIcon twocities_scout
+			
+			Item "Ye Olde Baker Boy"
+			Item "Upgradeable TF_WEAPON_SCATTERGUN"
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SCATTERGUN"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen					
+				
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 2.0 // 100% increased damage - $1600
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+				"clip size bonus" 3 // 150% clip size bonus - $1600
+				"hidden primary max ammo bonus" 2.5 // 150% max ammo bonus - $750
+				"projectile penetration" 1 // projectile pentration - $400
+				"heal on kill" 100 // 100 HP heal on kill - $800
+			}
+			ItemAttributes
+			{
+				ItemName "Ye Olde Baker Boy"
+				"attach particle effect" 17 // Sunbeams
+				"set item tint RGB" 16763904 //Yellow	
+			}
+			CharacterAttributes
+			{
+				"dmg taken from bullets reduced" .5 // 50% Fire Resistance - $600
+				"dmg taken from blast reduced" .5 // 50% Resistance - $600
+				"dmg taken from fire reduced" .5 // 50% Fire Resistance - $300
+			}				
+		}				
+	
+	
+	//Soldier
+	
+		T_TFBot_2013_Soldier_2500
+		{
+			Name "Soldier"
+		
+		
+			Class Soldier
+			Skill Expert
+			Attributes SpawnWithFullCharge
+			ClassIcon mvm_soldier			
+			
+			Item "Stout Shako"			
+			Item "The Buff Banner"		
+			Item "Gold Botkiller Rocket Launcher Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Rocket Launcher Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 1.5 // 50% increased damage - $800
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+			}
+			ItemAttributes
+			{
+				ItemName "Stout Shako"
+				"attach particle effect" 8 // Ghosts
+				"set item tint RGB" 3342130 //Green					
+			}	
+			CharacterAttributes
+			{
+				"dmg taken from crit reduced" .7 // 30% Crit Resist - $150
+			}			
+		}
+
+		T_TFBot_2013_Soldier_4500_Giant
+		{
+			Name "Soldier"
+			ClassIcon twocities_soldier_giant		
+		
+			Class Soldier
+			Skill Expert
+			Health 3800
+			Attributes HoldFireUntilFullReload
+			Attributes MiniBoss
+			Attributes SpawnWithFullCharge
+		
+			Item "Stout Shako"			
+			Item "The Buff Banner"		
+			Item "Diamond Botkiller Rocket Launcher Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "Diamond Botkiller Rocket Launcher Mk.I"
+				"Reload time decreased" .25 // 60% increased reload speed - $750 +1.25x bonus
+				"damage bonus" 3.0 // 100% increased damage - $1600 + 2x bonus
+				"fire rate bonus" .6 // 40% fire rate bonus - $800 + 1.5x bonus
+				"rocket specialist" 4 // Lv 4 rocket specialist - $1200 + 0x bonus		
+			}
+			ItemAttributes
+			{
+				ItemName "Stout Shako"
+				"attach particle effect" 17 // Sunbeams
+				"set item tint RGB" 16763904 //Yellow					
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}			
+		}
+
+		T_TFBot_2013_Soldier_5700_Giant_Rocket_Rain
+		{
+			Name "Soldier"
+			ClassIcon twocities_soldier_giant //make burstfire icon?		
+		
+			Class Soldier
+			Skill Expert
+			Health 3800
+			Attributes HoldFireUntilFullReload
+			Attributes MiniBoss
+			Attributes SpawnWithFullCharge
+		
+			Item "Stout Shako"			
+			Item "The Buff Banner"		
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"item style override" 1 // Australium
+				
+				"damage bonus" 2.25 (100% damage - $1600 + 2x bonus) - .75 (rocket rain)
+				"fire rate bonus" 0.001 // rocket rain priority over 40% - $800
+				"clip size upgrade atomic" 8 // rocket rain - priority over +2 clip - $400
+				"faster reload rate" 0.25 // Rocket Rain priority over 60% - $750
+				"blast radius increased" 2 // rocket rain
+				"projectile spread angle penalty" 10 // rocket rain
+				"rocket specialist" 4 // Rocket Specialist - $1200	
+				"heal on kill" 100 // +150 Heal on Kill	 - $800 x 1.5x bonus				
+			}
+			ItemAttributes
+			{
+				ItemName "Stout Shako"
+				//"attach particle effect" 17 // Sunbeams
+				"set item tint RGB" 16763904 //Yellow					
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}			
+		}
+
+		T_TFBot_2013_Soldier_13100_Giant //max
+		{
+			Name "Soldier"
+			ClassIcon 2013_soldier_giant		
+		
+			Class Soldier
+			Skill Expert
+			Health 3800
+			Attributes HoldFireUntilFullReload
+			Attributes MiniBoss
+			Attributes SpawnWithFullCharge
+		
+			Item "Stout Shako"			
+			Item "The Buff Banner"		
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen				
+				
+				"Reload time decreased" .25 // 60% 
+				"increased reload speed" .1 - $750 +1.25x bonus
+				"damage bonus" 3.0 // 100% increased damage - $1600 + 2x bonus
+				"fire rate bonus" .4 // 40% fire rate bonus - $800 + 1.5x bonus
+				"rocket specialist" 4 // Lv 4 rocket specialist - $1200 + 0x bonus
+				"heal on kill" 500 //100 HP heal on kill - $800 + extramoney bonus
+				"clip size bonus" 3 // +8 clip size bonus - $1600
+				"hidden primary max ammo bonus" 2.5 // 150% maxammo capacity
+			}
+			ItemAttributes
+			{
+				ItemName "Stout Shako"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red					
+			}
+			
+			CharacterAttributes
+			{
+				"move speed bonus"	0.65 // Move speed bonus over giant move speed - $600
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000	
+				"increase buff duration"	9.0	// Upgraded from stock $500 one				
+			}			
+		}
+
+
+		T_TFBot_2013_Soldier_13100_Giant_rocketrain //max
+		{
+			Name "Soldier"
+			ClassIcon 2013_soldier_giant		
+		
+			Class Soldier
+			Skill Expert
+			Health 3800
+			Attributes HoldFireUntilFullReload
+			Attributes MiniBoss
+			Attributes SpawnWithFullCharge
+		
+			Item "Stout Shako"			
+			Item "The Buff Banner"		
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen				
+				
+				"faster reload rate" 0.15 
+				"damage bonus" 3.0 
+				"fire rate bonus" 0.001 
+				"rocket specialist" 4 
+				"heal on kill" 500 
+				"clip size upgrade atomic" 10
+				"hidden primary max ammo bonus" 2.5
+				"projectile spread angle penalty" 10	
+				"blast radius increased" 2 // rocket rain
+				"rocket specialist" 4 // Rocket Specialist - $1200					
+			}						
+			ItemAttributes
+			{
+				ItemName "Stout Shako"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red					
+			}
+			
+			CharacterAttributes
+			{
+				"move speed bonus"	0.65 // Move speed bonus over giant move speed - $600
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000	
+				"increase buff duration"	9.0	// Upgraded from stock $500 one				
+			}			
+		}
+
+		T_TFBot_2013_Soldier_21700_rocketshotgun //max
+		{
+			Name "Soldier"
+		
+		
+			Class Soldier
+			Skill Expert
+			Attributes SpawnWithFullCharge
+			ClassIcon 2013_soldier		
+			
+			Item "Stout Shako"			
+			Item "The Buff Banner"		
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen				
+				
+				"faster reload rate" 0.4
+				"damage bonus" 3.0 
+				"fire rate bonus" 0.001 
+				"rocket specialist" 4 
+				"clip size upgrade atomic" 0
+				"hidden primary max ammo bonus" 2.5
+				"projectile spread angle penalty" 10	
+				"blast radius increased" 2 // rocket rain
+				"rocket specialist" 4 // Rocket Specialist - $1200					
+			}
+			ItemAttributes
+			{
+				ItemName "Stout Shako"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red					
+			}	
+			CharacterAttributes
+			{
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000	
+				"increase buff duration"	2.0	// Upgraded from stock $500 one				
+			}			
+		}		
+	
+		
+	//Pyro
+	
+	
+		T_TFBot_2013_Pyro_2500
+		{
+			Name "Pyro"
+		
+			Class Pyro
+			Skill Expert
+			ClassIcon mvm_pyro			
+			
+			
+			Item "Napper's Respite"
+			Item "Gold Botkiller Flame Thrower Mk.I"			
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Flame Thrower Mk.I"	
+				"damage bonus" 2.0 // 100% increased damage - $1600
+				"airblast pushback scale" 1.25 // 25% more airblast force - $100
+				"weapon burn dmg increased" 1.25 // 25% more burn damage
+				"weapon burn time increased" 1.5 // 50% more burn time - $500				
+			}
+			ItemAttributes
+			{
+				ItemName "Napper's Respite"
+				"attach particle effect" 6 //Green Confetti
+				"set item tint RGB" 3342130 //Green						
+			}
+		}
+		
+		T_TFBot_2013_Pyro_21700 // max
+		{
+			Name "Pyro"
+		
+			Class Pyro
+			Skill Expert
+			ClassIcon 2013_pyro			
+			
+			
+			Item "Napper's Respite"
+			Item "Upgradeable TF_WEAPON_FLAMETHROWER"
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_FLAMETHROWER"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen	
+
+				"damage bonus" 2.0 // 100% increased damage
+				"airblast pushback scale" 2 // 100% more airblast force
+				"weapon burn dmg increased" 2 // 100% more burn damage
+				"weapon burn time increased" 2 // 100% more burn time	
+				"heal on kill" 100 // +100 Heal on Kill	- $400				
+			}
+			ItemAttributes
+			{
+				ItemName "Napper's Respite"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red						
+			}
+			CharacterAttributes
+			{
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+				"move speed bonus" 1.3 // 30% move speed bonus - $600				
+			}			
+		}		
+		
+		
+	//Demo
+		
+		T_TFBot_2013_Demo_2500
+		{
+			Name "Demoman"
+		
+			Class Demoman
+			Skill Expert
+			ClassIcon mvm_demo		
+			
+			Item "The Buccaneer's Bicorne"
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_GRENADELAUNCHER"
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 1.2 // 20% increased damage - $400
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+			}
+			ItemAttributes
+			{
+				ItemName "The Buccaneer's Bicorne"
+				"attach particle effect" 60 //Dead Presidents
+				"set item tint RGB" 3342130 //Green				
+			}			
+		}
+
+		T_TFBot_2013_Demoknight_5700_Extended_Charge
+		{
+			Name "Demoknight"
+			
+			Class Demoman
+			ClassIcon twocities_demo //make demoknight
+			
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Chargin' Targe"
+			Item "Glengarry Bonnet"
+			Item "The Claidheamohmor"
+
+			ItemAttributes
+			{
+				ItemName "The Claidheamohmor"
+				"charge time increased" 4.5 //Special bonus attribute
+				"critboost on kill" 4 // 4s critboost on kill - $700
+				"heal on kill" 100 // +100 Heal on Kill	- $400
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+				"damage bonus" 2.0 // 100% increased damage - $1600		
+				
+			}
+			ItemAttributes
+			{
+				ItemName "The Chargin' Targe"
+				"charge recharge rate increased" 4.0 // 400% in recharge rate - $600
+				"damage force reduction" .1 // 90% damage push force - $400				
+			}
+			ItemAttributes
+			{
+				ItemName "The Glengarry Bonnet"
+				"attach particle effect" 56 //Zap Yellow
+				"set item tint RGB" 16763904 //Yellow				
+			}
+			CharacterAttributes
+			{
+				"move speed bonus" 1.3 // 30% move speed bonus - $600
+				"dmg taken from fire reduced" .50 // 50% Fire Resistance - $300		
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300			
+			}
+		}
+
+		T_TFBot_2013_Demo_8700_Giant_Spammer
+		{
+			Class Demoman		
+			Name "Demoman"
+			ClassIcon twocities_demo_giant
+			Health 3300
+			Skill Expert
+			Attributes MiniBoss
+			Attributes HoldFireUntilFullReload
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly			
+	
+			
+			Item "The Buccaneer's Bicorne"
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_GRENADELAUNCHER"
+				"item style override" 1 // Australium
+				"killstreak idleeffect" 2 //Yellow Sheen					
+				
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 1.8 // 80% increased damage - $2000
+				"fire rate bonus" .1 // Giant takes priority over 40% fire rate bonus - $800
+				"clip size upgrade atomic" 7.0 // priority over 200% clip size bonus - $1600
+				"heal on kill" 100 // +100 Heal on Kill - $800
+				"projectile spread angle penalty" 2				
+				"Projectile speed increased" 2 //100% increased projectile speed - $600
+			}
+			ItemAttributes
+			{
+				ItemName "The Buccaneer's Bicorne"
+				"attach particle effect" 56 //Zap Yellow
+				"set item tint RGB" 16763904 //Yellow			
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4
+				"dmg taken from blast reduced" .5 // 50% Resistance - $600
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance - $150		
+				"dmg taken from bullets reduced" .5 // 50% resist - $600			
+			}			
+		}
+		
+		
+		T_TFBot_2013_Demoknight_13100 //max
+		{
+			Name "Demoknight"
+			
+			Class Demoman
+			ClassIcon 2013_demo //knight
+			
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Chargin' Targe"
+			Item "Glengarry Bonnet"
+			Item "The Eyelander"
+
+			ItemAttributes
+			{
+				ItemName "The Eyelander"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen				
+				
+				"critboost on kill" 4 // 4s critboost on kill - $700
+				"heal on kill" 100 // +100 Heal on Kill	- $400
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+				"damage bonus" 2.0 // 100% increased damage - $1600					
+			}
+			ItemAttributes
+			{
+				ItemName "The Chargin' Targe"
+				"charge recharge rate increased" 4.0 // 400% in recharge rate - $600
+				"damage force reduction" .1 // 90% damage push force - $400				
+			}
+			ItemAttributes
+			{
+				ItemName "The Glengarry Bonnet"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red				
+			}
+			CharacterAttributes
+			{
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000			
+			}
+		}
+		
+		
+		T_TFBot_2013_Demoknight_13100_Giant //max
+		{
+			Name "Demoknight"
+			
+			Class Demoman
+			ClassIcon 2013_demo_giant //knight
+			
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Chargin' Targe"
+			Item "Glengarry Bonnet"
+			Item "The Eyelander"
+
+			ItemAttributes
+			{
+				ItemName "The Eyelander"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen					
+				
+				"critboost on kill" 4 // 4s critboost on kill - $700
+				"heal on kill" 100 // +100 Heal on Kill	- $400
+				"fire rate bonus" .6 // 40% fire rate bonus - $800
+				"damage bonus" 2.0 // 100% increased damage - $1600		
+				
+			}
+			ItemAttributes
+			{
+				ItemName "The Chargin' Targe"
+				"charge recharge rate increased" 4.0 // 400% in recharge rate - $600
+				"damage force reduction" .1 // 90% damage push force - $400				
+			}
+			ItemAttributes
+			{
+				ItemName "The Glengarry Bonnet"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red				
+			}
+
+			CharacterAttributes
+			{
+				"move speed bonus"	0.65 // Move speed bonus over giant move speed - $600
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000		
+			}				
+		}
+
+		T_TFBot_2013_Demo_21700 //max
+		{
+			Name "Demoman"
+		
+			Class Demoman
+			Skill Expert
+			ClassIcon 2013_demo_giant	
+			
+			Item "The Buccaneer's Bicorne"
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_GRENADELAUNCHER"
+				"item style override" 1 // Australium
+				"killstreak idleeffect" 2 //Yellow Sheen					
+				
+				"Reload time decreased" .4
+				"damage bonus" 1.8  
+				"heal on kill" 100
+				"projectile spread angle penalty" 2				
+				"Projectile speed increased" 2
+				"fire rate bonus" .05
+				"projectile spread angle penalty" 2
+			}
+			ItemAttributes
+			{
+				ItemName "The Buccaneer's Bicorne"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red				
+			}			
+		}		
+	
+
+	
+	//Heavy
+		
+		T_TFBot_2013_Heavy_2500
+		{
+			Name "Heavy"
+			ClassIcon mvm_heavy
+		
+			Class Heavyweapons
+			Skill Expert
+			
+			Item "Officer's Ushanka"	
+			Item "Gold Botkiller Minigun Mk.I"			
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Minigun Mk.I"
+				"fire rate bonus" .7 // 30% fire rate bonus - $1050
+				"attack projectiles" 1 //Destroy Projectiles - $400
+				"projectile penetration heavy" 2 // Lv 2 Projectile Penetration - $800	
+				"maxammo primary increased"	1.5 //50% ammo capacity - $250			
+			}	
+			ItemAttributes
+			{
+				ItemName "Officer's Ushanka"
+				"set item tint rgb" 13056 // Dark Green					
+				"attach particle effect" 30 // Blizzard 
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}
+		
+		T_TFBot_2013_Heavy_5700_Giant
+		{
+			Name "Heavy"
+			ClassIcon twocities_heavy_giant
+		
+			Class Heavyweapons
+			Health 5000
+			MaxVisionRange 1200
+			Attributes MiniBoss
+			WeaponRestrictions PrimaryOnly
+			Skill Expert
+			
+			Item "Officer's Ushanka"	
+			Item "Upgradeable TF_WEAPON_MINIGUN"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_MINIGUN"
+				"item style override" 1 // Australium
+				
+				"projectile penetration heavy" 3 // 3 level penetration - $1200	
+				"fire rate bonus" .6 // 40% fire rate bonus - $1400
+				"attack projectiles" 1 //Destroy Projectiles - $400
+				"maxammo primary increased"	1.5 //50% ammo capacity - $250	
+				"heal on kill" 100 // +100 Heal on Kill - $800				
+			}	
+			ItemAttributes
+			{
+				ItemName "Officer's Ushanka"
+				"attach particle effect" 17 // Sunbeams
+				"set item tint RGB" 16763904 //Yellow	
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance - $300
+				"dmg taken from bullets reduced" .75 // 25% resistance - $300
+				"move speed bonus"	0.65 // half giant move speed + 30% bonus - $600
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2				
+			}			
+		}
+
+		T_TFBot_2013_Heavy_Mini
+		{
+			Class Heavyweapons
+			Name "Gigglefister"
+			Skill Easy
+			ClassIcon heavy_mittens
+			Scale 0.65
+			WeaponRestrictions MeleeOnly
+			Health 60
+			Attributes AlwaysCrit
+			Attributes IgnoreFlag			
+			Item "The All-Father"
+			Item "Point and Shoot"
+			Item "The Holiday Punch"
+			ItemAttributes
+			{
+				ItemName "The Holiday Punch"
+				"damage bonus" 0.2
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	1.3
+			}
+		}
+
+		T_TFBot_2013_Heavy_13100_Giant // max
+		{
+			Name "Heavy"
+			ClassIcon 2013_heavy_giant
+		
+			Class Heavyweapons
+			Health 5000
+			MaxVisionRange 1200
+			Attributes MiniBoss
+			WeaponRestrictions PrimaryOnly
+			Skill Expert
+			
+			Item "Officer's Ushanka"	
+			Item "Upgradeable TF_WEAPON_MINIGUN"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_MINIGUN"
+				"item style override" 1 // Australium
+				"killstreak idleeffect" 2 //Yellow Sheen					
+				
+				"projectile penetration heavy" 3 // 3 level penetration - $1200	
+				"fire rate bonus" .4 // 40% fire rate bonus - $1400 x 1.5x bonus
+				"attack projectiles" 1 //Destroy Projectiles - $400
+				"maxammo primary increased"	2.5 //150% ammo capacity - $750
+				"heal on kill" 100 // +100 Heal on Kill - $800				
+			}	
+			ItemAttributes
+			{
+				ItemName "Officer's Ushanka"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red	
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.65 // Move speed bonus over giant move speed - $600
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000			
+			}			
+		}
+		
+		T_TFBot_2013_Heavy_13100_Giant_RocketMinigun // max
+		{
+			Name "Heavy"
+			ClassIcon 2013_mystery
+		
+			Class Heavyweapons
+			Health 100000
+			Attributes UseBossHealthBar
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss			
+			MaxVisionRange 1200
+			Attributes MiniBoss
+			WeaponRestrictions PrimaryOnly
+			Skill Expert
+			
+			Item "Officer's Ushanka"	
+			Item "Upgradeable TF_WEAPON_MINIGUN"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_MINIGUN"
+				"item style override" 1 // Australium
+				"killstreak idleeffect" 2 //Yellow Sheen	
+				"killstreak effect" 22001 //Red Eyes
+				"killstreak tier" 3 //Prof Killstreak
+				"attach particle effect" 2 //Flying Bits
+				"attach particle effect static" 4  // Community Sparkle
+
+				
+				"override projectile type" 2 // Rockets over bullets
+				"rocket specialist" 4 // Lv 4 rocket specialist
+				"projectile penetration heavy" 3 // 3 level penetration - $1200	
+				"fire rate bonus" .6 // 40% fire rate bonus - $1400 x 1.5x bonus
+				"maxammo primary increased"	2.5 //150% ammo capacity - $750
+				"heal on kill" 100 // +100 Heal on Kill - $800	
+				"projectile spread angle penalty" 2
+				"bullets per shot bonus" 6				
+			}	
+			ItemAttributes
+			{
+				ItemName "Officer's Ushanka"
+				"attach particle effect" 1 //Burning
+				"attach particle effect static" 14 //Scorching
+				"set item tint RGB" 16731392 //Red	
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.20
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4
+				"increased jump height" 1.6
+				"dmg taken from blast reduced" .75 
+				"dmg taken from bullets reduced" .75 
+				"dmg taken from fire reduced" .25 			
+				"dmg taken from crit reduced" .1 
+				"health regen" 10 			
+			}			
+		}		
+
+		T_TFBot_2013_Heavy_19600 //max
+		{
+			Name "Heavy"
+			ClassIcon 2013_heavy
+		
+			Class Heavyweapons
+			Skill Expert
+			
+			Item "Officer's Ushanka"	
+			Item "Upgradeable TF_WEAPON_MINIGUN"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_MINIGUN"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 2 //Yellow Sheen				
+				
+				"projectile penetration heavy" 3 // 3 level penetration - $1200	
+				"fire rate bonus" .4 // 40% fire rate bonus - $1400 x 1.5x bonus
+				"attack projectiles" 1 //Destroy Projectiles - $400
+				"maxammo primary increased"	2.5 //150% ammo capacity - $750
+				"heal on kill" 100 // +100 Heal on Kill - $800			
+			}	
+			ItemAttributes
+			{
+				ItemName "Officer's Ushanka"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red	
+			}
+			CharacterAttributes
+			{
+				"move speed bonus" 1.3 // 30% move speed bonus - $600
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+			}			
+		}		
+
+
+		
+		
+	//Engineer
+		
+		T_TFBot_2013_Engineer_2500_Teleporter
+		{
+			Class Engineer
+			Name "MVM Engineer"
+			Skill Expert
+			TeleportWhere spawnbot
+			Health 500
+			Attributes TeleportToHint
+			ClassIcon mvm_engineer
+			
+			Item "Engineer's Cap"	
+			Item "Gold Botkiller Wrench Mk.I"
+			
+
+			ItemAttributes
+			{
+				ItemName "Engineer's Cap"
+				"attach particle effect" 13 // Flaming 
+			}
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Wrench Mk.I"
+				"fire rate bonus" .6 // 40% fire rate bonus - $800	
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_PDA_ENGINEER_BUILD"
+				"engy building health bonus" 3 // 200% health bonus - $800
+				"engy sentry fire rate increased" // 20% fire rate increase - $700				
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .50 // 50% Resistance - $600
+				"dmg taken from bullets reduced" .50 // 50% Fire Resistance - $600
+				"dmg taken from crit reduced" .7 // 30% Crit Resist - $150
+			}			
+
+		}		
+		
+		
+	//Medic
+
+		T_TFBot_2013_Medic_2500
+		{
+			Name "Medic"
+		
+			Class Medic
+			Skill Expert
+			//Attributes SpawnWithFullCharge				
+			
+			Item "The Kritzkrieg"	
+			Item "Otolaryngologist's Mirror"	
+			ClassIcon mvm_medic
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"ubercharge rate bonus" 1.25 // 25% ubercharge rate bonus
+				"healing mastery" 1 // Level 1 Healing Mastery - $250
+				"overheal expert" 1 // lv 1 overheal expert - $250
+			}
+			ItemAttributes
+			{
+				ItemName "Otolaryngologist's Mirror"
+				"attach particle effect" 9 // Green Energy
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .50 // 50% Resistance - $600
+				"dmg taken from bullets reduced" .50 // 50% Fire Resistance - $600
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+			}			
+		}
+
+		T_TFBot_2013_Medic_4500_Giant
+		{
+			Name "Medic"
+		
+			Class Medic
+			ClassIcon twocities_medic_giant
+			
+			Skill Expert
+			Attributes SpawnWithFullCharge	
+			Health 4500
+			Attributes MiniBoss
+			WeaponRestrictions SecondaryOnly
+			
+			
+			Item "The Kritzkrieg"	
+			Item "Otolaryngologist's Mirror"	
+
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"ubercharge rate bonus" 1.75 // 50% ubercharge rate bonus + 1.5x
+				"uber duration bonus" 4 // 4s of duration bonus					
+				"healing mastery" 4 // Level 4 Healing Mastery - $1000
+				"overheal expert" 4 // lv 1 overheal expert - $1000
+			}
+			ItemAttributes
+			{
+				ItemName "Otolaryngologist's Mirror"
+				"attach particle effect" 56 //Zap Yellow
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .50 // 50% Resistance - $600
+				"dmg taken from bullets reduced" .50 // 50% Fire Resistance - $600
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.6
+
+			}			
+		}
+
+		
+		T_TFBot_2013_Medic_8700_Giant
+		{
+			Name "Medic"
+		
+			Class Medic
+			ClassIcon twocities_medic_giant
+			
+			Skill Expert
+			Attributes SpawnWithFullCharge	
+			Health 4500
+			Attributes MiniBoss
+			WeaponRestrictions SecondaryOnly
+			
+			Item "The Overdose"			
+			Item "The Kritzkrieg"	
+			Item "Otolaryngologist's Mirror"	
+
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"killstreak idleeffect" 2 //Yellow Sheen
+				
+				"ubercharge rate bonus" 2.0 // 75% ubercharge rate bonus + ~1.5x - $900
+				"uber duration bonus" 6 // 4s of duration bonus	-$6s
+				"healing mastery" 4 // Level 4 Healing Mastery - $1000
+				"overheal expert" 4 // lv 1 overheal expert - $1000
+			}
+			ItemAttributes
+			{
+				ItemName "Otolaryngologist's Mirror"
+				"attach particle effect" 56 //Zap Yellow
+			}
+			ItemAttributes
+			{
+				ItemName "The Overdose"
+				"fire rate bonus" .6 // 40% bonus - $800
+				"heal on kill" 25 // +25 Heal on Kill - $250	
+				"mad milk syringes"	1 //mad milk syringes $200			
+			}			
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000			
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.6
+
+			}			
+		}
+		
+		T_TFBot_2013_Medic_13100_Giant //Max
+		{
+			Name "Medic"
+		
+			Class Medic
+			ClassIcon 2013_medic_giant
+			
+			Skill Expert
+			Attributes SpawnWithFullCharge	
+			Health 4500
+			Attributes MiniBoss
+			WeaponRestrictions SecondaryOnly
+			
+			Item "The Overdose"			
+			Item "The Kritzkrieg"	
+			Item "Otolaryngologist's Mirror"	
+
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"killstreak idleeffect" 2 //Yellow Sheen
+				
+				"ubercharge rate bonus" 2.0 // 75% ubercharge rate bonus + ~1.5x - $900
+				"uber duration bonus" 6 // 4s of duration bonus	-$6s
+				"healing mastery" 4 // Level 4 Healing Mastery - $1000
+				"overheal expert" 4 // lv 1 overheal expert - $1000
+			}
+			ItemAttributes
+			{
+				ItemName "Otolaryngologist's Mirror"
+				"attach particle effect" 13 //Burning
+			}
+			ItemAttributes
+			{
+				ItemName "The Overdose"
+				"fire rate bonus" .6 // 40% bonus - $800
+				"heal on kill" 25 // +25 Heal on Kill - $250	
+				"mad milk syringes"	1 //mad milk syringes $200			
+			}			
+			CharacterAttributes
+			{
+				"move speed bonus"	0.65 // Move speed bonus over giant move speed - $600
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4			
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+
+			}			
+		}		
+		
+		
+		T_TFBot_2013_Medic_13100 //Max
+		{
+			Name "Medic"
+		
+			Class Medic
+			ClassIcon 2013_medic
+			
+			Skill Expert
+			Attributes SpawnWithFullCharge	
+			WeaponRestrictions SecondaryOnly
+			
+			Item "The Overdose"			
+			Item "The Kritzkrieg"	
+			Item "Otolaryngologist's Mirror"	
+
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"killstreak idleeffect" 2 //Yellow Sheen
+				
+				"ubercharge rate bonus" 2.0 // 75% ubercharge rate bonus + ~1.5x - $900
+				"uber duration bonus" 6 // 4s of duration bonus	-$6s
+				"healing mastery" 4 // Level 4 Healing Mastery - $1000
+				"overheal expert" 4 // lv 1 overheal expert - $1000
+			}
+			ItemAttributes
+			{
+				ItemName "Otolaryngologist's Mirror"
+				"attach particle effect" 13 // Burning
+			}
+			ItemAttributes
+			{
+				ItemName "The Overdose"
+				"fire rate bonus" .6 // 40% bonus - $800
+				"heal on kill" 25 // +25 Heal on Kill - $250	
+				"mad milk syringes"	1 //mad milk syringes $200			
+			}			
+			CharacterAttributes
+			{
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+
+			}			
+		}
+
+		T_TFBot_2013_Medic_13100_giant //Max
+		{
+			Name "Medic"
+		
+			Class Medic
+			Health 4500
+			Attributes MiniBoss			
+			ClassIcon 2013_medic
+			
+			Skill Expert
+			Attributes SpawnWithFullCharge	
+			WeaponRestrictions SecondaryOnly
+			
+			Item "The Overdose"			
+			Item "The Kritzkrieg"	
+			Item "Otolaryngologist's Mirror"	
+
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"killstreak idleeffect" 2 //Yellow Sheen
+				
+				"ubercharge rate bonus" 2.0 // 75% ubercharge rate bonus + ~1.5x - $900
+				"uber duration bonus" 6 // 4s of duration bonus	-$6s
+				"healing mastery" 4 // Level 4 Healing Mastery - $1000
+				"overheal expert" 4 // lv 1 overheal expert - $1000
+			}
+			ItemAttributes
+			{
+				ItemName "Otolaryngologist's Mirror"
+				"attach particle effect" 13 //Burning
+			}
+			ItemAttributes
+			{
+				ItemName "The Overdose"
+				"fire rate bonus" .6 // 40% bonus - $800
+				"heal on kill" 25 // +25 Heal on Kill - $250	
+				"mad milk syringes"	1 //mad milk syringes $200			
+			}			
+			CharacterAttributes
+			{
+				"move speed bonus"	0.65 // Move speed bonus over giant move speed - $600
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4				
+				"increased jump height" 1.6 // 20% Increased Jump Height - $300	
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+
+			}			
+		}		
+		
+		
+	//Sniper
+		
+		T_TFBot_2013_Sniper_2500
+		{
+			Name "Sniper"
+		
+			Class Sniper
+			Skill Expert
+			MaxVisionRange 2500
+			ClassIcon mvm_sniper
+			
+			Item "Desert Marauder"
+			Item "Gold Botkiller Sniper Rifle Mk.I"			
+
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Sniper Rifle Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed - $750
+				"damage bonus" 1.25 // 25% increased damage - $400
+				"projectile penetration" 1 // projectile penetration - $400
+				"SRifle Charge rate increased" 1.75 // 50% faster charge - $600
+				"explosive sniper shot" 1 // explosive headshot lv 1 - $350
+			}
+			ItemAttributes
+			{
+				ItemName "Desert Marauder"
+				"attach particle effect" 35 // Smoking
+				"set item tint rgb" 13056 // Dark Green					
+			}		
+		}
+
+		T_TFBot_2013_Sniper_2500_Huntsman_Giant
+		{
+			Name "Sniper"
+			ClassIcon mvm_sniper_giant //make giant bow			
+		
+			Class Sniper
+			Skill Expert
+			Scale 1.6
+			Health 3300
+
+			
+			Item "Larrikin Robin"
+			Item "The Huntsman" 			
+
+			ItemAttributes
+			{
+				ItemName "The Huntsman"
+				"Reload time decreased" .25 // 60% increased reload speed - $750 + 1.25x bonus
+				"damage bonus" 2.0 // 50% increased damage - $400 + 2x bonus
+				"bleeding duration" 19 // 15s bleed - $600 + 1.25x bonus
+			}
+			ItemAttributes
+			{
+				ItemName "Larrikin Robin"
+				"set item tint RGB" 3342130 //Green					
+			}
+			CharacterAttributes
+			{
+				"move speed bonus" 0.5
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"override footstep sound set" 4
+			}				
+		}
+
+		
+		T_TFBot_2013_Sniper_21700_Huntsman_Burst //max
+		{
+			Name "Sniper"
+			ClassIcon 2013_sniper //bow		
+		
+			Class Sniper
+			Skill Expert
+			Attributes HoldFireUntilFullReload
+
+			
+			Item "Larrikin Robin"
+			Item "The Huntsman" 			
+
+			ItemAttributes
+			{
+				ItemName "The Huntsman"
+				"faster reload rate" .1 // 60% increased reload speed - $750 + 1.25x bonus
+				"damage bonus" 2.0 // 100% increased damage - $1600
+				"bleeding duration" 15 // 15s bleed - $600
+				"heal on kill" 100
+				"fire rate bonus" .001
+				"clip size bonus" 3			
+				"projectile penetration" 1				
+			}
+			ItemAttributes
+			{
+				ItemName "Larrikin Robin"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red					
+			}
+			CharacterAttributes
+			{
+				"move speed bonus" 0.5
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"override footstep sound set" 4
+			}				
+		}		
+		
+		
+	//Spy
+		
+		T_TFBot_2013_Spy_2500
+		{
+			Name "Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon mvm_spy
+			
+			Item "Fancy Fedora"
+			Item "The Diamondback"
+			Item "The Spy-cicle"			
+
+			ItemAttributes
+			{
+				ItemName "The Spy-cicle"
+				"fire rate bonus" .6 // 40% bonus - $800
+				"heal on kill" 100 // +100 Heal on Kill	- $800					
+			}
+			ItemAttributes
+			{
+				ItemName "Fancy Fedora"
+				"attach particle effect" 36 // Steaming	
+				"set item tint RGB" 3342130 //Green					
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+				"move speed bonus" 1.3 // 30% move speed bonus - $600					
+			}			
+		}
+		
+		T_TFBot_2013_Spy_21700 //max
+		{
+			Name "Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon 2013_spy
+			
+			Item "Fancy Fedora"
+			Item "The Spy-cicle"
+			Item "The Diamondback"
+			
+
+			ItemAttributes
+			{
+				ItemName "The Spy-cicle"
+				"fire rate bonus" .6 // 40% bonus - $800
+				"heal on kill" 100 // +100 Heal on Kill	- $800	
+				"critboost on kill" 4 //4 seconds of critboost on kill - $700					
+			}
+			ItemAttributes
+			{
+				ItemName "The Diamondback"
+				"projectile penetration" 1 // projectile pentration - $200
+				"fire rate bonus" .6 // 40% fire rate bonus - $400
+				"clip size bonus" 3.5 // 250% clip size bonus - $800
+				"critboost on kill" 4 //4 seconds of critboost on kill - $700				
+			}			
+			ItemAttributes
+			{
+				ItemName "Fancy Fedora"
+				"attach particle effect" 13 //Burning
+				"set item tint RGB" 16731392 //Red					
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 75% Resistance - $900
+				"dmg taken from bullets reduced" .75 // 75% Fire Resistance - $600
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance - $450				
+				"dmg taken from crit reduced" .1 // 90% Crit Resist - $450
+				"health regen" 10 // 10 HP Regen - $1000
+				"move speed bonus" 1.3 // 30% move speed bonus - $600
+			}		
+		}		
+
+		
+	} // END TEMPLATE
+} // END WAVESCHEDULE
+
+
+//Use this?
+//50-89% = Green/Yellow
+//90-110% = Yellow
+//111%+ = Red
+//12:05 AM - Auroranaut: 110-120%: Flash yellow/red

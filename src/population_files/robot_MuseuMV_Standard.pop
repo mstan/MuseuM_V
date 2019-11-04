@@ -1,0 +1,3262 @@
+WaveSchedule
+{
+
+
+
+
+	Templates 
+	{
+
+//Beta //////////////////////////////////////////
+		
+		T_TFBot_Beta_Scout
+		{
+			Name "Beta Scout"
+			
+			Class Scout
+		}
+		
+		T_TFBot_Beta_Soldier
+		{
+			Name "Beta Soldier"
+		
+			Class Soldier
+			Skill Easy
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_ROCKETLAUNCHER"
+				"clip size bonus" 1.5 //Clip size of 6 rockets
+			}
+		}
+		
+		T_TFBot_Beta_Pyro
+		{
+			Name "Beta Pyro"	
+		
+			Class Pyro
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_FLAMETHROWER"
+				"airblast disabled" 1 //Pyro can't airblast
+				"dmg falloff increased" 1.25 //Damage falloff increased 25%			
+			}
+		}
+
+		T_TFBot_Beta_Demoman
+		{
+			Name "Beta Demoman"	
+		
+			Class Demoman
+			Skill Easy
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_GRENADELAUNCHER"
+				"clip size bonus" 1.5 //Clip size of 6 pipes
+			}
+		}		
+		
+		T_TFBot_Beta_Heavy
+		{
+			Name "Beta Heavy"
+		
+			Class Heavyweapons
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_MINIGUN"
+				"minigun spinup time increased" 1.33 
+				"aiming movespeed decreased" .72 // 80 Hammer Units instead of 110
+			}			
+			
+		}	
+
+		T_TFBot_Beta_Engineer
+		{
+			Name "Beta Engineer"
+		
+			Class Engineer
+			Skill Expert
+		}	
+		
+		T_TFBot_Beta_Medic
+		{
+			Name "Beta Medic"
+			
+			ClassIcon medic_uber			
+			Class Medic		
+		}			
+
+		T_TFBot_Beta_Sniper
+		{
+			Name "Beta Sniper"
+			
+			Class Sniper
+			Skill Hard
+			MaxVisionRange 2500	
+		}		
+
+		T_TFBot_Beta_Spy
+		{
+			Name "Beta Spy"
+		
+			Class Spy
+			Skill Expert
+		}	
+		
+// NON-BETA /////////	
+
+
+		T_TFBot_NonBeta_Soldier
+		{
+			Name "Soldier"
+		
+			Class Soldier
+			Skill Normal
+			
+		}
+
+		T_TFBot_NonBeta_Demoman
+		{
+			Name "Demoman"	
+		
+			Class Demoman
+			Skill Normal
+			
+		}
+
+		T_TFBot_NonBeta_Heavy
+		{
+			Name "Heavy"	
+		
+			Class Heavy
+			Skill Normal
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_MINIGUN"
+				"minigun spinup time increased" 1.33 
+				"aiming movespeed decreased" .72 // 80 Hammer Units instead of 110
+			}			
+		}
+		
+		T_TFBot_Beta_Medic
+		{
+			Name "Medic"
+			
+			ClassIcon medic_uber			
+			Class Medic		
+		}		
+		
+
+//Gold Rush Update (APRIL 29 2008) //////////////////////////////////////////
+
+		T_TFBot_GoldRush_Medic
+		{
+			Name "Gold Rush Medic"
+		
+			Class Medic
+			Attributes SpawnWithFullCharge	
+			ClassIcon medic_kritzkrieg
+			//ClassIcon medic_blutsauger
+			
+			Item "The Blutsauger"
+			Item "The Kritzkrieg"
+			Item "The Ubersaw"		
+		}
+		
+//Pyro Update (JUNE 19 2008) //////////////////////////////////////////			
+		
+		T_TFBot_PyroUpdate_Pyro
+		{
+			Name "Pyro"
+		
+			Class Pyro
+		}		
+		
+		T_TFBot_PyroUpdate_Backburner_Pyro
+		{
+			Name "Backburner Pyro"
+			
+			Class Pyro
+			ClassIcon pyro_backburner
+			
+			Item "The Backburner" 
+			
+			ItemAttributes
+			{
+				ItemName "The Backburner"
+				"airblast disabled" 1 //Pyro can't airblast
+				"max health additive bonus" 50 	
+			}			
+		}
+		
+		T_TFBot_PyroUpdate_FlareGun_Pyro
+		{
+			Name "Flare Pyro"
+		
+			Class Pyro
+			WeaponRestrictions SecondaryOnly	
+			ClassIcon pyro_flare			
+			
+			Item "The Flare Gun" 		
+			
+			ItemAttributes
+			{
+				ItemName "The Flare Gun"
+				"damage penalty" .66 // 20 base dmg
+				"no crit boost" 1 //Doesn't crit
+			}	
+		}	
+
+//JULY 29 2008 ////////////////////////////////////////
+
+		T_TFBot_JUL292008_Backburner_Pyro
+		{
+			Name "Backburner Pyro"
+			
+			Class Pyro
+			ClassIcon pyro_backburner			
+			
+			Item "The Backburner" 			
+			ItemAttributes
+			{
+				ItemName "The Backburner"
+				"airblast disabled" 1 //Pyro can't airblast
+			}			
+		} 	
+
+//Heavy Update (AUGUST 19 2008) ////////////////////////////////////////		
+
+		T_TFBot_HeavyUpdate_Natascha_Heavy
+		{
+			Name "Natascha Heavy"
+			
+			ClassIcon heavy_natascha
+			Class Heavyweapons
+			Item "Natascha"
+			
+			ItemAttributes
+			{
+				ItemName "Natascha"
+				"minigun spinup time increased" 1.33 
+				"aiming movespeed decreased" .72 // 80 Hammer Units instead of 110
+			}
+		}
+
+		//Unused
+		T_TFBot_HeavyUpdate_Sandvich_Heavy
+		{
+			Name "Picnic Heavy"
+		
+			Class Heavyweapons
+			
+			WeaponRestrictions SecondaryOnly	
+			
+			ItemAttributes
+			{
+				ItemName "The Sandvich"
+			}	
+		}
+		T_TFBot_HeavyUpdate_KGB_Heavy
+		{
+			Name "Boxing Heavy"
+		
+			Class Heavyweapons
+			ClassIcon heavy_champ
+			WeaponRestrictions MeleeOnly	
+			
+			ItemAttributes
+			{
+				ItemName "The Killing Gloves of Boxing"
+			}
+			
+			
+		}	
+
+//FEBRUARY 02 2009 //////////////////////////////////////////			
+		
+		
+		T_TFBot_FEB022009_FlareGun_Pyro
+		{
+			Name "Flare Pyro"
+		
+			Class Pyro
+			WeaponRestrictions SecondaryOnly
+			ClassIcon pyro_flare			
+			
+			Item "The Flare Gun" 
+			ItemAttributes
+			{
+				ItemName "The Flare Gun"
+				"no crit boost" 1 //Doesn't crit
+			}			
+		}	
+		
+//SCOUT UPDATE (FEBRUARY 24 2009) //////////////////////////////////////////
+
+		T_TFBot_ScoutUpdate_FAN_Scout
+		{
+			Name "FAN Scout"
+		
+			Class Scout
+			ClassIcon scout_fan
+			Item "The Force-a-Nature"
+		}
+		
+		T_TFBot_ScoutUpdate_Bonk_Scout
+		{
+			Name "Bonk! Scout"
+		
+			Class Scout
+			Item "Bonk! Atomic Punch"
+			WeaponRestrictions MeleeOnly
+			ClassIcon scout_bonk
+		}
+		
+		T_TFBot_ScoutUpdate_Sandman_Scout
+		{
+			Name "Sandman Scout"
+		
+			Class Scout
+			ClassIcon scout_stun
+			WeaponRestrictions MeleeOnly
+			Item "The Sandman"
+			 
+			ItemAttributes
+			{
+				ItemName "The Sandman"
+				"no double jump" 1
+			} 
+		}
+		
+		T_TFBot_ScoutUpdate_Sandman_Scout_Special
+		{
+			Name "Sandman Scout"
+		
+			Class Scout
+			ClassIcon scout_stun
+			WeaponRestrictions MeleeOnly
+			Item "The Sandman"
+			 
+			ItemAttributes
+			{
+				ItemName "The Sandman"
+				"no double jump" 1
+				"effect bar recharge rate increased" 0.25	
+			} 
+		}		
+		
+
+	
+	
+// Sniper vs Spy (MAY 21 2009)
+	//Introduce Hats
+	
+	//Huntsman
+		T_TFBot_SniperVsSpy_Huntsman_Sniper
+		{
+			Name "Huntsman"
+			Class Sniper
+			ClassIcon sniper_bow
+			WeaponRestrictions PrimaryOnly
+			
+			Item "The Huntsman"	
+			Item "Trophy Belt"			
+		}	
+		
+		//Borrowed from robot_standard
+		T_TFBot_SniperVsSpy_Sniper
+		{
+			Class Sniper
+			Name "Razorback Sniper"
+			MaxVisionRange 4000
+			ClassIcon sniper_razorback
+			Skill Hard
+			
+			Item "The Razorback"
+			Item "Trophy Belt"			
+		}
+
+		//Courtesy of rcmero
+		T_TFBot_SniperVsSpy_Jarate_Sniper
+		{
+			Name "Jarate Master"
+			Class Sniper
+			Skill Normal
+			WeaponRestrictions SecondaryOnly			
+			Item "Jarate"
+			Item "Trophy Belt"					
+			Attributes RemoveOnDeath
+			ClassIcon sniper_jarate
+			CharacterAttributes
+			{
+				"effect bar recharge rate increased" .25 //Respawns 75% faster
+			}
+		}
+		
+		
+		T_TFBot_SniperVsSpy_AmbassadorDeadRinger_Spy
+		{
+			Name "Dead Ringer Ambassador"
+			Class Spy
+			Skill Expert
+			ClassIcon spy_snipervsspy
+
+			Item "Fancy Fedora"
+			Item "The Ambassador"	
+			Item "The Dead Ringer"
+		}		
+
+//JUNE 8 2009 //////////////////////////////////////////			
+
+		T_TFBot_JUN082009_FlareGun_Pyro
+		{
+			Name "Flare Pyro"
+		
+			Class Pyro
+			WeaponRestrictions SecondaryOnly	
+			ClassIcon pyro_flare				
+			
+			Item "The Flare Gun" 
+			Item "Pyro's Beanie"
+			
+			ItemAttributes
+			{
+				ItemName "The Flare Gun"
+				"no crit boost" 1 //Doesn't crit
+				"minicrit vs burning player" 1			
+			}			
+		}	
+
+//CLASSLESS UPDATE (AUGUST 13 2009) ///////////////////////////////
+
+		T_TFBot_ClasslessUpdate_Sandman_Scout
+		{
+			Name "Sandman Scout"
+		
+			Class Scout
+			ClassIcon scout_stun
+			WeaponRestrictions MeleeOnly	
+			
+			Item "Bonk Helm"
+			Item "The Sandman"
+			 
+			ItemAttributes
+			{
+				ItemName "The Sandman"
+				"max health additive penalty" -30
+			} 		
+		}		
+		
+// WAR! (DECEMBER 19 2009) //////////////////////
+
+		T_TFBot_War_DirectHitBuffBanner_Soldier
+		{
+			Name "Direct Hit Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_buff			
+			Attributes SpawnWithFullCharge
+			Item "The Direct Hit"
+			Item "The Buff Banner"		
+			Item "Soldier's Stash"
+
+		}
+		
+		T_TFBot_War_Equalizer_Soldier
+		{
+			Name "Equalizer Soldier"
+		
+			Class Soldier
+			WeaponRestrictions MeleeOnly
+			ClassIcon soldier_escape_plan
+			
+			Item "The Equalizer"
+			Item "Soldier's Stash"	
+		
+			ItemAttributes
+			{
+				ItemName "The Equalizer"
+				"damage bonus" 2.0
+				"mod shovel speed boost" 2
+			}
+		}
+		
+		T_TFBot_War_EyelanderCharge_Demoman
+		{
+			Name "Demoknight"
+			Class Demoman
+			ClassIcon demoknight	
+			WeaponRestrictions MeleeOnly	
+			
+			Item "Demoman's Fro"
+			Item "The Chargin' Targe"
+			Item "The Eyelander"
+		}		
+
+//JANUARY 6 2010 ///////////////////////////////
+
+		T_TFBot_JAN062010_Sandman_Scout
+		{
+			Name "Sandman Scout"
+		
+			Class Scout
+			ClassIcon scout_stun
+			WeaponRestrictions MeleeOnly
+			Item "Ye Olde Baker Boy"
+			Item "The Sandman"
+			 
+			ItemAttributes
+			{
+				ItemName "The Sandman"
+				"max health additive penalty" -15
+			} 		
+		}
+//APRIL 15 2010 ////////////////////////////////////////////
+
+		T_TFBot_APR152010_Equalizer_Soldier
+		{
+			Name "Equalizer Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_escape_plan			
+			
+			Item "The Equalizer"
+			Item "Soldier Samurai Hat"
+			
+			WeaponRestrictions MeleeOnly
+			ItemAttributes
+			{
+				ItemName "The Equalizer"
+				"mod shovel speed boost" 2
+			}
+		}		
+		
+// FIRST COMMUNITY CONTRIBUTION UPDATE (MARCH 18 2010) //////////////////	
+
+		T_TFBot_FirstCommunity_Homewrecker_Pyro
+		{
+			Name "Homewrecker Pyro"
+		
+			Class Pyro
+			Skill Hard		
+			WeaponRestrictions MeleeOnly
+			ClassIcon pyro_homewrecker			
+			
+			
+			Item "Pyro Brain Sucker"
+			Item "The Homewrecker"
+			
+		}
+		
+		T_TFBot_FirstCommunity_PainTrain_Demoman
+		{
+			Name "Pain Train Conductor"	
+		
+			Class Demoman
+			WeaponRestrictions MeleeOnly
+			ClassIcon demoknight_paintrain
+			
+			Item "The Chargin' Targe"
+			Item "The Pain Train"
+			Item "Demoman Hallmark"
+		}		
+		
+		// Dalokoh's unimplemented
+		
+//119th (APRIL 29 2010) ////////////////////////////////////////
+
+		T_TFBot_119th_Backburner_Pyro
+		{
+			Name "Backburner Pyro"
+		
+			Class Pyro
+			ClassIcon pyro_backburner				
+			
+			Item "Pyro Brain Sucker"
+			Item "The Backburner" 
+			
+			ItemAttributes
+			{
+				ItemName "The Backburner"
+				"airblast disabled" 1 //Pyro can't airblast
+				"damage bonus" 1.20
+			}			
+		} 			
+
+// Second Community Contribution Update ( MAY 20 2010 ) //////////////////////
+
+		T_TFBot_SecondCommunity_Skullcutter_Demoman
+		{
+			Name "Skullcutter Demoman"		
+		
+			Class Demoman
+			ClassIcon demoknight_skullcutter
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Chargin' Targe"
+			Item "The Scotsman's Skullcutter"
+			Item "Demoman Hallmark"
+
+		}
+		
+		T_TFBot_SecondCommunity_Shiv_Sniper
+		{
+			Name "Tribalman Sniper"
+			
+			Skill Hard
+			MaxVisionRange 2500			
+			Class Sniper
+			ClassIcon sniper_shiv
+			
+			Item "Sniper Fishing Hat"
+			Item "The Razorback"
+			Item "The Tribalman's Shiv"
+		
+		}			
+
+
+//APRIL 28, 2010 //////////////////////////////////////////
+
+		T_TFBot_APR282010_Heavy
+		{
+			Name "Heavy"
+			
+			Class Heavyweapons
+			Item "Tough Guy's Toque"			
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_MINIGUN"
+			}				
+		}
+		
+		T_TFBot_APR282010_Natascha_Heavy
+		{
+			Name "Natascha Heavy"
+		
+			Class Heavyweapons
+			ClassIcon heavy_natascha
+			
+			Item "Officer's Ushanka"	
+			
+			ItemAttributes
+			{
+				ItemName "Natascha"
+			}			
+		}	
+
+//MAY 19 2010 //////////////////////////////////////////			
+
+		T_TFBot_MAY92010_FlareGun_Pyro
+		{
+			Name "Flare Pyro"
+		
+			Class Pyro
+			ClassIcon pyro_flare				
+			
+			WeaponRestrictions SecondaryOnly				
+			
+			Item "The Flare Gun" 
+			Item "Brigade Helm"
+			
+			ItemAttributes
+			{
+				ItemName "The Flare Gun"		
+			}			
+		}	
+
+		T_TFBot_MAY192010_Backburner_Pyro
+		{
+			Name "Backburner Pyro"
+		
+			Class Pyro
+			ClassIcon pyro_backburner	
+			
+			Item "The Backburner" 
+			Item "Brigade Helm"
+			
+			
+			ItemAttributes
+			{
+				ItemName "The Backburner"
+				"airblast disabled" 1 //Pyro can't airblast
+				"damage bonus" 1.15
+			}			
+		} 			
+
+// ENGINEER UPDATE (JULY 8 2010)
+
+		T_TFBot_EngineerUpdate_FrontierJustice_Engineer
+		{
+			Name "Frontier Justice Engineer"
+		
+			Class Engineer
+			//WeaponRestrictions PrimaryOnly	
+			ClassIcon engineer_frontierjustice
+			
+			Item "The Frontier Justice"
+			Item "Mining Light"
+		}	
+		
+		T_TFBot_EngineerUpdate_SouthernHospitality_Engineer
+		{
+			Name "Southern Hospitality Engineer"
+		
+			Class Engineer
+			WeaponRestrictions MeleeOnly
+			ClassIcon engineer_southernhospitality
+			
+			Item "Mining Light"
+			Item "The Southern Hospitality"
+		}
+		
+		T_TFBot_EngineerUpdate_GoldenWrench_Engineer
+		{
+			Name "Golden Wrench Engineer"
+		
+			Class Engineer
+			WeaponRestrictions MeleeOnly			
+			
+			Item "Golden Wrench"
+		}		
+		
+		T_TFBot_EngineerUpdate_Gunslinger_Engineer_Battle // Battle Gunslinger
+		{
+			Name "Gunslinger Engineer"		
+			Item "Texas Ten Gallon"
+			Class Engineer
+			Skill Expert
+			ClassIcon engineer_gunslinger
+			Attributes IgnoreFlag
+			//Health 275
+			
+			Item "The Gunslinger"
+		}
+			
+// MANN-CONOMY (SEPTEMBER 30 2010) ////////////////////////////////////
+
+		T_TFBot_Mannconomy_Milkman_Scout
+		{
+			Name "Special Delivery Scout"
+		
+			Class Scout
+			ClassIcon scout_specialdelivery
+			
+			Item "The Milkman"
+			Item "The Shortstop"
+			Item "Mad Milk"
+			Item "The Holy Mackerel"
+			
+			ItemAttributes
+			{
+				ItemName "The Shortstop"
+				"damage force increase hidden" 1.0 //Remove 80%
+				"airblast vulnerability multiplier hidden" 1.0 //Remove 80%
+				"healing received bonus" 1.0 // Remove 20% bonus
+				"max health additive bonus" 25
+				
+			}		
+			
+		}
+		
+		T_TFBot_Mannconomy_TankBuster_Soldier
+		{
+			Name "Tank Buster Soldier"
+		
+			Class Soldier
+			Attributes SpawnWithFullCharge
+			ClassIcon soldier_tankbuster
+			
+			Item "The Grenadier's Softcap"			
+			Item "The Battalion's Backup"					
+			Item "The Black Box"
+			
+			ItemAttributes
+			{
+				ItemName "The Black Box"
+				//dmg from sentry reduced set bonus won't work
+			}
+			ItemAttributes
+			{
+				ItemName "The Battalion's Backup"
+				"max health additive bonus" 0
+			}
+		}		
+		
+		T_TFBot_Mannconomy_GasJockey_Pyro
+		{
+			Name "Gas Jockey Pyro"
+		
+			Class Pyro
+			ClassIcon pyro_gasjockey
+			
+			Item "The Attendant"			
+			Item "The Degreaser"
+			Item "The Powerjack"
+
+			CharacterAttributes
+			{
+				"dmg taken from bullets increased" 1.1
+				"move speed bonus" 1.1
+			}
+			ItemAttributes
+			{
+				ItemName "The Powerjack"
+				"move speed bonus" 1.0 //Equal out move speed bonus on it now to normal
+				"damage bonus" 1.25
+				"crit mod disabled" 0
+			}
+			
+		}		
+		
+		T_TFBot_Mannconomy_CrocOStyle_Sniper
+		{
+			Name "Croc-o-Style Sniper"
+		
+			Class Sniper
+			Skill Hard
+			ClassIcon sniper_crocostyle
+			MaxVisionRange 3000					
+			
+			
+			Item "Ol' Snaggletooth"		
+			Item "The Sydney Sleeper"
+			Item "Darwin's Danger Shield"
+			Item "The Bushwacka"
+	
+			ItemAttributes
+			{
+				ItemName "Darwin's Danger Shield"
+				"dmg taken from bullets reduced" 1.0 //Equal out resistance
+				"dmg taken from blast increased" 1.0 //Equal out vuln
+			}
+			ItemAttributes
+			{
+				ItemName "The Sydney Sleeper"
+				"SRifle Charge rate decreased" .8 //Reduce 25% in hatless
+				//no death from headshots won't work			
+			}			
+		}
+
+		T_TFBot_Mannconomy_Saharan_Spy
+		{
+			Name "Saharan Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon spy_saharan
+			
+			Item "The Familiar Fez"			
+			Item "L'etranger"
+			Item "Your Eternal Reward"
+
+
+			ItemAttributes
+			{
+				ItemName "L'etranger"				
+				"cloak consume rate decreased" 1.0 //Equal out 40% bonus
+				//quiet unstealth won't work				
+			}
+		}	
+
+		T_TFBot_Mannconomy_GRU_Heavy
+		{
+			Name "Heavyweight Champ"		
+		
+			Class Heavyweapons
+			Skill Easy
+			ClassIcon heavy_gru
+			WeaponRestrictions MeleeOnly
+			
+			Item "Gloves of Running Urgently"
+			Item "Pugilist's Protector"	
+
+			ItemAttributes
+			{
+				ItemName "Gloves of Running Urgently"				
+				"active health degen" -6
+				"self mark for death" 0				
+			}			
+		}
+		
+		T_TFBot_Mannconomy_VitaSaw_Medic
+		{
+			Name "VitaSaw Medic"		
+			Class Medic
+			ClassIcon medic_vitasaw
+
+			Skill Easy
+			WeaponRestrictions MeleeOnly
+			
+			Item "Otolaryngologist's Mirror"			
+			Item "The Vita-Saw"
+		}
+
+//SCREAM FORTRESS (OCTOBER 27 2010) //////////////////////////////////////	
+	// * GIANT DEMOMAN IN SPECIAL FILE * 
+
+// AUSTRALIAN CHRISTMAS (DECEMBER 17 2010) /////////////////////////////
+
+		T_TFBot_AustralianChristmas_ExpertsOrdanance_LochnLoad_Demoman
+		{
+			Name "Expert Ordanance Demoman"
+		
+			Class Demoman
+			ClassIcon demo_expertordanance
+			
+			Item "Scotch Bonnet"			
+			Item "The Loch-n-Load"
+			Item "The Ullapool Caber"
+
+			CharacterAttributes
+			{
+				"dmg taken from fire reduced" .9
+			}
+			ItemAttributes
+			{
+				ItemName "The Loch-n-Load"
+				"damage bonus" 1.1 // 10% original from base 20% bonus now
+			}			
+			
+			
+			
+		}	
+		
+		T_TFBot_AustralianChristmas_ExpertsOrdanace_Caber_Demoman
+		{
+			Name "Caber Demoman"		
+		
+			Class Demoman
+			ClassIcon demoknight_caber
+			
+			Item "Scotch Bonnet"				
+			Item "The Chargin' Targe"
+			//Fix targe to be fire vuln
+			Item "The Ullapool Caber"
+			
+			WeaponRestrictions MeleeOnly
+			ItemAttributes
+			{
+				ItemName "The Ullapool Caber"
+				//"damage bonus" 1000
+			}
+			CharacterAttributes
+			{
+				"dmg taken from fire reduced" .9
+			}			
+		}		
+
+		T_TFBot_AustralianChristmas_HibernatingBear_BrassBeast_Heavy
+		{
+			Name "Brass Beast Heavy"
+			
+			Class Heavyweapons
+			ClassIcon heavy_hibernatingbear
+
+			Item "Big Chief"
+			Item "The Brass Beast"
+			//Item "The Buffalo Steak Sandvich"
+			Item "Warrior's Spirit"
+			CharacterAttributes
+			{
+				"dmg taken from crit reduced" .95	
+			}
+		}		
+
+		T_TFBot_AustralianChristmas_HibernatingBear_WarriorsSpirit_Heavy
+		{
+			Name "Hibernating Bear"		
+		
+			Class Heavyweapons
+			Skill Easy
+			WeaponRestrictions MeleeOnly		
+			ClassIcon heavy_warriorsspirit			
+			
+			Item "Big Chief"					
+			Item "The Buffalo Steak Sandvich"
+			Item "Warrior's Spirit"
+	
+			ItemAttributes
+			{
+				ItemName "Warrior's Spirit"
+				"dmg taken from crit reduced" .95
+			}			
+		}
+		
+		T_TFBot_AustralianChristmas_MedievalMedic_Medic
+		{
+			Name "Crusader Medic"
+			
+			Class Medic
+			WeaponRestrictions PrimaryOnly	
+			ClassIcon medic_medieval		
+			
+			Item "Berliner's Bucket Helm"					
+			Item "The Crusader's Crossbow"
+			Item "The Amputator"
+
+			ItemAttributes
+			{
+				ItemName "The Crusader's Crossbow"
+				"Reload time increased" 3.33 // Increased to old speed
+			}
+			ItemAttributes
+			{
+				ItemName "The Amputator"
+				"damage penalty" 1.0 //counteract  downside
+				"health regen" -3 //counteract regen bonus
+				"health regen" 1				
+				//provide on active on this weapon
+				
+			}							
+		}	
+
+		T_TFBot_AustralianChristmas_CandyCane_Scout
+		{
+			Name "Candy Cane Scout"
+		
+			Class Scout
+			Skill Hard			
+			WeaponRestrictions MeleeOnly	
+			ClassIcon scout_candycane			
+			
+			Item "The Candy Cane"	
+			Item "Flipped Trilby"
+		}		
+
+		T_TFBot_AustralianChristmas_BostonBasher_Scout
+		{
+			Name "Basher Scout"
+		
+			Class Scout
+			Skill Hard			
+			WeaponRestrictions MeleeOnly	
+			ClassIcon scout_bostonbasher
+			
+			Item "The Boston Basher"				
+			Item "Flipped Trilby"			
+		}
+
+		T_TFBot_AustraliumChristmas_ClaidheamohmorCharge_Demoman
+		{
+			Name "Demoknight"
+			
+			Class Demoman
+			ClassIcon demoknight
+			WeaponRestrictions MeleeOnly
+			ClassIcon demoknight_claidheamohmor
+			
+			Item "The Chargin' Targe"
+			Item "Prince Tavish's Crown"
+			Item "The Claidheamohmor"
+
+			ItemAttributes
+			{
+				ItemName "The Claidheamohmor"
+				//"charge time increased" 4.5
+				"critboost on kill" 3
+			}
+		}	
+
+		T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+		{
+			Name "Fists of Steel Heavy"	
+			
+			Class Heavyweapons
+			Skill Hard
+			ClassIcon heavy_steelfist			
+			WeaponRestrictions MeleeOnly
+			
+			Item "Fists of Steel"
+			Item "Magnificent Mongolian"
+			
+			ItemAttributes
+			{
+				ItemName "Fists of Steel"
+				"dmg from ranged reduced" .4 // Old bonus of 60%
+			}			
+		}		
+
+		T_TFBot_AustraliumChristmas_BackScratcher_Pyro
+		{
+			Name "Back Scratcher"	
+			
+			Class Pyro
+			Skill Hard		
+			WeaponRestrictions MeleeOnly
+			ClassIcon pyro_backscratcher
+			
+			Item "The Back Scratcher"		
+			Item "Pyromancer's Mask"
+		}	
+
+		T_TFBot_AustraliumChristmas_Jag_Engineer
+		{
+			Name "Jag Engineer"
+		
+			Class Engineer
+			ClassIcon engineer_jag		
+			
+			Item "The Jag"
+			Item "Industrial Festivizer"
+
+		}		
+		
+		
+// RIFT (FEBRUARY 3, 2011) /////////////////////////
+
+		T_TFBot_Rift_SunOnAStick_Scout
+		{
+			Name "Sun-on-a-Stick Scout"
+		
+			Class Scout
+			Skill Hard 
+			WeaponRestrictions MeleeOnly
+			ClassIcon scout_sunonastick
+			
+			Item "Sun-on-a-Stick"
+			Item "Scout Beanie"
+
+			ItemAttributes
+			{
+				ItemName "Sun-on-a-Stick"
+				"minicrit vs burning player" 1
+			}			
+		}
+		
+		T_TFBot_RIFT_SharpenedVolcanoFragment_Pyro
+		{
+			Name "Volcano Fragment Pyro"
+		
+			Class Pyro
+			Skill Hard
+			WeaponRestrictions MeleeOnly
+			ClassIcon pyro_sharpenedvolcanofragment
+			
+			Item "Madame Dixie"
+			Item "Sharpened Volcano Fragment" 		
+		} 		
+		
+	
+// Shogun (MARCH 10 2011) /////////////////////////	
+
+		T_TFBot_Shogun_HalfZatoichi_Demoman
+		{
+			Name "Samurai Demoknight"	
+			
+			Class Demoman
+			ClassIcon demoknight_samurai
+			WeaponRestrictions MeleeOnly			
+			
+			Item "The Chargin' Targe"
+			Item "The Half-Zatoichi"
+			Item "Demo Kabuto"
+		}
+		
+		T_TFBot_Shogun_Spy
+		{
+			Name "Conniving Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon spy_kunai
+			
+			Item "Conniver's Kunai"
+			Item "Spy Oni Mask"
+		}	
+
+		T_TFBot_Shogun_Fanowar_Scout
+		{
+			Name "Fan O'War Scout"
+		
+			Class Scout	
+			Skill Hard			
+			WeaponRestrictions MeleeOnly
+			ClassIcon scout_fanowar
+
+			Item "The Fan O'War"		
+			Item "Hero's Tail"
+		}
+		
+		T_TFBot_Shogun_Soldier
+		{
+			Name "Conch Samurai"		
+		
+			Class Soldier
+			Attributes SpawnWithFullCharge	
+			Skill Hard		
+			ClassIcon soldier_conch
+			
+			Item "Soldier Samurai Hat"			
+			Item "The Concheror"
+			Item "The Half-Zatoichi"
+			
+			ItemAttributes
+			{
+				ItemName "The Concheror"
+				"health regen" 0
+			}
+				
+		}		
+		
+//HATLESS (APRIL 14 2011) ////////////////////////////////////////
+
+		T_TFBot_Hatless_Backburner_Pyro
+		{
+		
+			Name "Backburner Pyro"
+			
+			Class Pyro
+			ClassIcon pyro_backburner
+			
+			Item "The Backburner" 			
+		} 
+		
+		T_TFBot_Hatless_GasJockey_Pyro
+		{
+			Name "Gas Jockey Pyro"
+			
+			Class Pyro
+			WeaponRestrictions PrimaryOnly
+			ClassIcon pyro_gasjockey
+			
+			//Item "The Attendant"	// HATLESS		
+			Item "The Degreaser"
+			Item "The Powerjack"
+
+			CharacterAttributes
+			{
+				"dmg taken from bullets increased" 1.1
+				"move speed bonus" 1.1
+			}
+			ItemAttributes
+			{
+				ItemName "The Powerjack"
+				"move speed bonus" 1.0 // Move speed decreased to equal out bonus
+			}
+		}		
+		
+
+		T_TFBot_Hatless_SunOnAStick_Scout
+		{
+			Name "Sun-on-a-Stick Scout"
+			ClassIcon scout_sunonastick
+		
+			Class Scout
+			Skill Hard 
+			WeaponRestrictions MeleeOnly
+			
+			Item "Sun-on-a-Stick"
+			//Item "Scout Beanie" //Hatless
+
+			ItemAttributes
+			{
+				ItemName "Sun-on-a-Stick"
+				"minicrit vs burning player" 1
+			}			
+		}
+		
+		T_TFBot_Hatless_ExpertsOrdanance_LochnLoad_Demoman
+		{
+			Name "Expert Ordanance Demoman"
+		
+			Class Demoman
+			ClassIcon demo_expertordanance
+			
+			//Item "Scotch Bonnet"	//Hatless	
+			Item "The Loch-n-Load"
+			Item "The Ullapool Caber"
+
+			CharacterAttributes
+			{
+				"dmg taken from fire reduced" .9
+			}
+		}
+
+		T_TFBot_Hatless_FistsofSteel_Heavy
+		{
+			Name "Fists of Steel Heavy"
+		
+			Class Heavyweapons
+			Skill Hard
+			ClassIcon heavy_steelfist			
+			WeaponRestrictions MeleeOnly
+			
+			Item "Fists of Steel"	
+			//Item "Officer's Ushanka //Hatless
+		}
+		
+	// THE FOLLOWING WERE HATLESS UPDATES THAT WERE REVERTED ON APRIL 15 (THE DAY AFTER) 
+		//THE CHANGFES INCLUDE -25% DAMAGE DONE REPLACING "NO RANDOM CRITICAL HITS" ON NUMEROUS WEAPONS
+	
+		T_TFBot_Hatless_EyelanderCharge_Demoman
+		{
+		
+
+			Name "Demoknight"
+			
+			Class Demoman		
+			ClassIcon demoknight
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Chargin' Targe"
+			Item "The Eyelander"
+			// Item "Prince Tavish's Crown"	// Hatless	
+
+			ItemAttributes
+			{
+				ItemName "The Eyelander"
+				"crit mod disabled" 1
+				"damage penalty" .75
+			}
+		}
+		
+		// Unused
+		T_TFBot_Hatless_HeadtakerCharge_Demoman
+		{
+			Name "Demoknight"		
+		
+			Class Demoman
+			ClassIcon demoknight
+			WeaponRestrictions MeleeOnly			
+			
+			Item "The Chargin' Targe"
+			Item "The Horseless Headless Horseman's Headtaker"
+
+			ItemAttributes
+			{
+				ItemName "The Horseless Headless Horseman's Headtaker"
+				"crit mod disabled" 1
+				"damage penalty" .75
+			}
+		}
+		
+		
+		T_TFBot_Hatless_ClaidheamohmorCharge_Demoman
+		{
+			Name "Demoknight"		
+		
+			Class Demoman
+			ClassIcon demoknight_claidheamohmor
+			WeaponRestrictions MeleeOnly	
+			
+			Item "The Chargin' Targe"
+			Item "The Claidheamohmor"
+			// Item "Prince Tavish's Crown" // Hatless
+			ItemAttributes
+			{
+				ItemName "The Claidheamohmor"
+				"crit mod disabled" 1
+				"damage penalty" .75
+			}
+		}
+
+		T_TFBot_Hatless_ExpertsOrdanace_Caber_Demoman
+		{
+			Name "Caber Demoman"		
+		
+			Class Demoman
+			ClassIcon demoknight
+			WeaponRestrictions MeleeOnly			
+			
+			
+			// Item "Prince Tavish's Crown"	// Hatless		
+			Item "The Chargin' Targe"
+			Item "The Ullapool Caber"
+
+			ItemAttributes
+			{
+				ItemName "The Ullapool Caber"
+				"crit mod disabled" 1
+				"damage penalty" .75
+			}
+			CharacterAttributes
+			{
+				"dmg taken from fire reduced" .9
+			}			
+		}		
+		
+		T_TFBot_Hatless_SouthernHospitality_Engineer
+		{
+			Name "Southern Hospitality Engineer"
+		
+			Class Engineer
+			WeaponRestrictions MeleeOnly
+			ClassIcon engineer_southernhospitality
+			
+			Item "The Southern Hospitality"
+			//Item "Texas Ten Gallon" // Hatless
+
+			ItemAttributes
+			{
+				ItemName "The Southern Hospitality"
+				"crit mod disabled" 1
+				"damage penalty" .75
+			}			
+			
+		}		
+		
+		//Battle Gunslinger
+		T_TFBot_HatlessUpdate_Gunslinger_Engineer_Battle
+		{
+			Name "Gunslinger Battle Engineer"
+			ClassIcon engineer_gunslinger
+		
+			Class Engineer
+			Skill Expert
+			//Health 275
+			
+			Item "The Gunslinger"
+			//Item "Texas Ten Gallon" // Hatless			
+			
+			ItemAttributes
+			{
+				ItemName "The Gunslinger"
+				"crit mod disabled" 1
+				"damage penalty" .75
+			}			
+			
+		}		
+		
+
+
+// UBER UPDATE (JUNE 23 2011) //////////////////////////////////////
+
+
+		// Day 1
+
+
+		T_TFBot_Uber_FamilyBusiness_Heavy
+		{
+			Name "Gangster Heavy"
+		
+			Class Heavyweapons
+			ClassIcon heavy_shotgun
+			Name "Family BusinessHeavy"
+			Skill Hard
+			WeaponRestrictions SecondaryOnly
+			ClassIcon heavy_familybusiness
+			
+			Item "The Family Business"
+			Item "Capone's Capper"
+
+			ItemAttributes
+			{
+				ItemName "The Family Business"
+				//"faster reload rate" 0.1
+				///"fire rate bonus" 2.5
+				//"bullets per shot bonus" 3
+				//"damage bonus" 0.33
+			}
+		}
+		
+		T_TFBot_Uber_Tomislav_Heavy
+		{
+			Name "Tomislav Heavy"		
+			Skill Hard
+			WeaponRestrictions PrimaryOnly
+			
+			Class Heavyweapons
+			Item "Tomislav"
+			Item "Capone's Capper"	
+			ClassIcon heavy_tomislav		
+
+			ItemAttributes
+			{
+				ItemName "Tomislav"
+				"minigun spinup time decreased" .25 // Old 75% spinup
+			}
+		}
+		
+		T_TFBot_Uber_EvictionNotice_Heavy
+		{
+			Class Heavyweapons
+			Name "Eviction Notice Heavy"
+	
+			Skill Hard
+			ClassIcon heavy_champ
+			WeaponRestrictions MeleeOnly
+			
+			Item "Capone's Capper"					
+			Item "The Eviction Notice" 
+		}
+
+		T_TFBot_Uber_ManOfHonor_Spy
+		{
+			Class Spy
+			Skill Expert
+			ItemClass spy_manofhonor
+			
+			Item "The Enforcer"
+			Item "The Big Earner"
+			Item "Cosa Nostra Cap"
+			Item "The Made Man"
+
+			ItemAttributes
+			{
+				ItemName "The Enforcer"
+				"damage bonus" 1.2 // prenerf damage bonus
+				"damage bonus while undisguised" 1.0 // counteract existing damage bonus
+				"fire rate penalty" 1.0 //counteract existing fire rate penatly to have old
+				
+			}
+		}		
+		
+		// Day 2
+		
+		T_TFBot_Uber_DesertMaurauder_Sniper
+		{
+			Name "Desert Sniper"		
+		
+			Class Sniper
+			Skill Hard
+			MaxVisionRange 3000		
+			ClassIcon sniper_desert
+			
+			Item "The Bazaar Bargain"
+			Item "The Shahanshah"
+			Item "Desert Marauder"
+		}	
+
+		T_TFBot_Uber_Persian_Demoknight
+		{
+			Name "Demoknight"		
+		
+			Class Demoman
+			ClassIcon demo_sultan
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Persian Persuader"
+			Item "The Splendid Screen"
+			Item "Ali Baba's Wee Booties"
+			Item "Sultan's Ceremonial"
+	
+		}	
+					
+		T_TFBot_Uber_SodaPopper_Scout
+		{
+			Name "Bonk Boy"
+		
+			Class Scout	
+			ClassIcon scout_bonkboy
+			
+			Item "The Soda Popper"			
+			Item "The Winger"
+			Item "The Atomizer"
+			Item "Bonk Boy"
+					
+
+			ItemAttributes			
+			{
+				ItemName "The Winger"
+				"increased jump height from weapon"	1.0 // To counteract existing bonus
+			}			
+		}
+		
+		T_TFBot_Uber_LibertyLauncher_Soldier
+		{
+			Name "Liberty Launcher Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_jeepcap
+			
+			Item "The Liberty Launcher"
+			Item "The Reserve Shooter"
+			Item "The Market Gardener"		
+			Item "Jumper's Jeepcap"
+			
+			ItemAttributes			
+			{
+				ItemName "The Liberty Launcher"		
+				"clip size penalty" .75 //Old clip size penalty
+				"damage penalty" 1.0 // Counteract new damage penalty
+				"rocket jump damage reduction" 1.0 // Counteract new bonus 
+			}		
+		}
+
+		T_TFBot_Uber_LibertyLauncher_Soldier_Special
+		{
+			Name "Liberty Launcher Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_jeepcap
+			
+			Item "The Liberty Launcher"
+			Item "The Reserve Shooter"
+			Item "The Market Gardener"		
+			Item "Jumper's Jeepcap"
+			
+			ItemAttributes			
+			{
+				ItemName "The Liberty Launcher"		
+				"clip size penalty" .75 //Old clip size penalty
+				"damage penalty" .6
+				"rocket jump damage reduction" 1.0 // Counteract new bonus 
+				"damage causes airblast" 1	//Knockback
+				"fire rate bonus" .6 // Fire rate bonus
+				"faster reload rate" .6 // Reload Rate Bonus
+			}		
+		}	
+
+		T_TFBot_Uber_LibertyLauncher_Soldier_Burst_Special
+		{
+			Name "Liberty Launcher Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_jeepcap
+			
+			Item "The Liberty Launcher"
+			Item "The Reserve Shooter"
+			Item "The Market Gardener"		
+			Item "Jumper's Jeepcap"
+			
+			ItemAttributes			
+			{
+				ItemName "The Liberty Launcher"		
+				"rocket jump damage reduction" 1.0 // Counteract new bonus 
+				"damage causes airblast" 1	//Knockback
+				"faster reload rate" 1.75
+				"fire rate bonus" 0.05
+				"clip size penalty" 0.5
+				"projectile spread angle penalty" 3				
+			}		
+		}		
+		
+		T_TFBot_Uber_ReserveShooter_Soldier
+		{
+			Name "Reserve Shooter"
+		
+			Class Soldier
+			WeaponRestrictions SecondaryOnly	
+			ClassIcon soldier_jeepcap
+			
+			Item "The Reserve Shooter"
+			Item "Jumper's Jeepcap"
+
+			ItemAttributes			
+			{
+				ItemName "The Reserve Shooter"
+				"mod mini-crit airborne deploy" 360 //6 minutes
+			}		
+		}	
+		
+		T_TFBot_Uber_DisciplinaryAction_Soldier
+		{
+		
+			Name "Disciplinary Action Soldier"
+		
+			Class Soldier
+			WeaponRestrictions MeleeOnly
+			ClassIcon soldier_armoredauthority
+			
+			Item "The Disciplinary Action"
+			Item "Armored Authority" 
+			Item "Fancy Dress Uniform"	
+		}			
+		
+		T_TFBot_Uber_ClinicalTrial_Medic
+		{
+			Name "Clinician Medic"
+		
+			Class Medic
+			ClassIcon medic_quickfix
+			
+			Item "The Overdose"
+			Item "The Quick-Fix"
+			Item "The Solemn Vow"
+			Item "Otolaryngologist's Mirror"
+			
+			ItemAttributes			
+			{
+				ItemName "The Quick-Fix"
+				"overheal penalty" .01 // No overheal
+			}		
+		
+		}
+		
+		T_TFBot_Uber_ClinicalTrial_Medic_QuickUber
+		{
+			Name "Clinician Medic"
+		
+			Class Medic
+			ClassIcon medic_quickfix
+			Skill Normal
+			Attributes SpawnWithFullCharge			
+			
+			Item "The Overdose"
+			Item "The Quick-Fix"
+			Item "The Solemn Vow"
+			Item "Otolaryngologist's Mirror"
+			
+			ItemAttributes			
+			{
+				ItemName "The Quick-Fix"
+				"overheal penalty" .01 // No overheal
+				"ubercharge rate bonus" 5
+				"uber duration bonus" -3				
+			}		
+		
+		}		
+		
+		
+		T_TFBot_Uber_Detonator_Pyro
+		{
+			Name "Detonator Pyro"
+		
+			Class Pyro
+			WeaponRestrictions SecondaryOnly	
+			ClassIcon pyro_detonator				
+			
+			Item "The Detonator"	
+			Item "Old Guadalajara"
+		}			
+		
+// JUNE 28 2011
+
+		T_TFBot_JUN282011_Tomislav_Heavy
+		{
+			Name "Tomislav Heavy"		
+		
+			Class Heavyweapons
+			Skill Hard
+			WeaponRestrictions PrimaryOnly
+			ClassIcon heavy_tomislav
+			
+			Item "Capone's Capper"				
+			Item "Tomislav"
+
+			ItemAttributes
+			{
+				ItemName "Tomislav"
+				"minigun spinup time decreased" .6 // 40 % spinup bonus
+			}
+		}
+
+// SUMMER SALE (JULY 1 2011) //////////////////////////////////////
+	//DEMOPAN
+	
+		// UNUSED
+		// FRYING PAN DOES NOT WORK
+		T_TFBot_SummerCampSale_Demoman
+		{
+			Name "STOUT SHAKO FOR 2 REFINED"		
+		
+			Class Demoman
+			WeaponRestrictions MeleeOnly				
+							
+			Item "The Chargin' Targe"
+			Item "Frying Pan"
+			Item "TTG Glasses"
+			Item "Treasure Hat 1"
+		}	
+	
+// GRODBORT VICTORY PACK (JULY 20 2011 ) 
+
+		T_TFBot_Grodbort_Soldier
+		{
+			Name "Grodbort Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_pith
+			
+			Item "The Cow Mangler 5000"
+			Item "The Righteous Bison"
+			Item "Lord Cockswain's Novelty Mutton Chops and Pipe"		
+			Item "Lord Cockswain's Pith Helmet"
+			
+			ItemAttributes
+			{
+				ItemName "The Cow Mangler 5000"
+				"clip size bonus" 1.25 // Increase Clip size to 5
+			}
+		}
+
+		T_TFBot_Grodbort_Soldier_Burst
+		{
+			Name "Grodbort Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_pith
+			
+			Item "The Cow Mangler 5000"
+			Item "The Righteous Bison"
+			Item "Lord Cockswain's Novelty Mutton Chops and Pipe"		
+			Item "Lord Cockswain's Pith Helmet"
+			
+			ItemAttributes
+			{
+				ItemName "The Cow Mangler 5000"
+				"clip size bonus" 1.25 // Increase Clip size to 5
+				"faster reload rate" 1.75
+				"fire rate bonus" 0.05
+				"projectile spread angle penalty" 3				
+			}
+		}		
+		
+// JULY 20 2011 ///////////////////////////
+
+		T_TFBot_JUL202011_Grodbort_Soldier
+		{
+			Name "Grodbort Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_pith			
+			
+			Item "The Cow Mangler 5000"
+			Item "The Righteous Bison"
+			Item "Lord Cockswain's Novelty Mutton Chops and Pipe"		
+			Item "Lord Cockswain's Pith Helmet"
+			
+			ItemAttributes
+			{
+				ItemName "The Cow Mangler 5000"
+				"clip size bonus" 1.25 // Increase Clip size to 5
+				"damage penalty" .9 //Damage penalty
+				"faster reload rate" .95 //Slower reload by 5%
+			}
+		}			
+	
+//MANNO-TECHNOLOGY DEUS EX (AUGUST 18 2011)
+
+		T_TFBot_DeusEx_Widowmaker_Engineer
+		{
+			Name "Widowmaker Engineer"
+			
+			Class Engineer
+			WeaponRestrictions PrimaryOnly
+			ClassIcon engineer_widowmaker
+			Attributes IgnoreFlag
+			
+			Item "The Widowmaker"	
+			Item "Western Wear"		
+			Item "The Deus Specs"
+			
+			ItemAttributes
+			{
+				ItemName "The Widowmaker"
+				"mod ammo per shot" 60 // Old amount
+			}
+		}
+		
+		T_TFBot_DeusEx_ShortCircuit_Engineer
+		{
+			Name "Short Circuit Engineer"
+		
+			Class Engineer
+			WeaponRestrictions SecondaryOnly
+			Attributes AlwaysCrit		
+			ClassIcon engineer_shortcircuit
+			
+			Item "The Short Circuit"
+			Item "The Deus Specs"
+		
+			ItemAttributes
+			{
+				ItemName "The Short Circuit"
+				"mod ammo per shot" 36 // 36 total
+				"fire rate bonus" 1.0 //To reduce 25% bonus
+			}
+		}		
+
+		T_TFBot_DeusEx_Diamondback_Spy
+		{
+			Name "DiamondBack Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon spy_diamondback
+			
+			Item "The Diamondback"
+			Item "The Big Earner"
+			Item "Belltower Spec Ops"	
+		}
+
+		T_TFBot_DeusEx_Machina_Sniper
+		{
+			Name "Machina Sniper"
+		
+			Class Sniper
+			Name "DeusEx Sniper"
+			Skill Hard
+			MaxVisionRange 3000
+			ClassIcon sniper_machina
+			
+			Item "The Machina"
+			Item "Crocleather Slouch"	
+			Item "The Deus Specs"
+		}			
+		
+	
+	
+	
+// MANNIVERSARY (OCTOBER 13 2011) ////////////////////////////////	
+
+		T_TFBot_Manniversary_Demoman
+		{
+			Name "Swagman"		
+		
+			Class Demoman
+			WeaponRestrictions MeleeOnly	
+			ClassIcon demo_bicorne
+							
+			Item "The Scottish Handshake"
+			Item "A Whiff of the Old Brimstone"
+			Item "The Buccaneer's Bicorne"
+			Item "The Bootlegger"
+		}	
+		
+		T_TFBot_Manniversary_Widowmaker_Engineer
+		{
+			Name "Widowmaker Engineer"
+		
+			Class Engineer
+			ClassIcon engineer_widowmaker
+			WeaponRestrictions PrimaryOnly
+			
+			Item "The Widowmaker"
+			Item "The Deus Specs"
+			//Item "The Sarif Cap"	
+		}		
+
+// AUSTRALIAN CHRISTMAS 2011 (DECEMBER 15 2011) /////////////////////////
+		
+	
+		T_TFBot_AustralianChristmas2011_SantasLittleAccomplice_Scout
+		{
+			Name "Santa's Little Helper"		
+		
+			Class Scout
+			WeaponRestrictions MeleeOnly
+			ClassIcon scout_wrapassassin
+			
+			Item "The Wrap Assassin"
+			Item "The Big Elfin Deal"
+			Item "The Bootie Time" 
+		}	
+		
+		T_TFBot_AustralianChristmas2011_GrodbortMoonMan_Pyro
+		{
+			Name "Grodbort Pyro"
+		
+			Class Pyro
+			Skill Normal
+			ClassIcon pyro_bubble
+			
+			Item "The Phlogistinator"
+			Item "The Third Degree"
+			Item "The Bubble Pipe"		
+			Item "Dr. Grordbort's Moonman Pack"
+			Item "The Manmelter"	
+			
+		}	
+		
+		T_TFBot_AustralianChristmas2011_GrodbortBraniac_Engineer
+		{
+			Name "Grodbort Engineer"
+		
+			Class Engineer
+			WeaponRestrictions PrimaryOnly	
+			Classicon engineer_brainiac
+			Attributes IgnoreFlag
+			
+			Item "The Pomson 6000"		
+			Item "The Eureka Effect"		
+			Item "The Brainiac Hairpiece"
+			Item "The Brainiac Goggles"	
+
+			ItemAttributes
+			{
+				ItemName "The Pomson 6000"
+				"projectile penetration" 1
+			}
+		}
+
+		T_TFBot_AustralianChristmas2011_Spy
+		{
+			Name "Scrooge Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon spy_spycicle
+			
+			Item "The Spy-cicle"
+			Item "The Ebenezer"
+		}
+
+		T_TFBot_AustralianChristmas2011_HolidayPunch_Heavy
+		{
+			Name "Holiday Punch Heavy"	
+
+			Class Heavyweapons
+
+			Skill Expert
+			ClassIcon heavy_mittens
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Holiday Punch"
+			Item "The Holiday Headcase"
+		}		
+
+// MARCH 15 2012 //////////////////////////////
+
+
+		T_TFBot_MAR152012_CozyCamper_Sniper
+		{
+			Name "Cozy Camper"
+		
+			Class Sniper
+			Skill Hard
+			MaxVisionRange 2500
+			
+			Item "The Cozy Camper"
+			Item "Sniper Fishing Hat"			
+		}
+
+		
+		
+		
+		
+//PYROMANIA (JUNE 7 2012) ////////////////////////////////////////////
+
+
+		T_TFBot_Pyromania_Equalizer_Soldier
+		{
+			Name "Equalizer Soldier"
+			
+			WeaponRestrictions MeleeOnly	
+			Class Soldier
+			ClassIcon soldier_equalizer_split
+			
+			Item "The Equalizer"
+			Item "Soldier Drill Hat"
+
+		}			
+
+		T_TFBot_Pyromania_EscapePlan_Soldier
+		{
+			Name "Escape Plan Soldier"
+			
+			WeaponRestrictions MeleeOnly
+			Class Soldier
+			ClassIcon soldier_escape_plan			
+			
+			Item "The Escape Plan" // no minicrits
+			Item "Soldier Drill Hat"					
+
+		}
+		
+		T_TFBot_Pyromania_BabyFace_Scout
+		{
+			Name "Babyface Blaster Scout"
+		
+			Class Scout
+			Skill Easy
+			Attributes SpawnWithFullCharge	
+			ClassIcon scout_fedfightinfedora
+			
+			Item "Baby Face's Blaster"		
+			Item "Pretty Boy's Pocket Pistol"
+			Item "The Fed-Fightin' Fedora"
+			Item "Dillinger's Duffel"
+	
+			ItemAttributes			
+			{
+				ItemName "Baby Face's Blaster"
+				"move speed penalty" .65 // 35% penalty
+				"clip size penalty" 1.0 // Counteract new penalty
+				"weapon spread bonus" .6 // Old weapon spread bonus
+				"damage penalty" .8 // Damage penalty. Not sure of original value
+			}
+		}
+
+		T_TFBot_Pyromania_ScorchShot_Pyro
+		{
+			Name "Scorch Shot Pyro"
+		
+			Class Pyro
+			WeaponRestrictions SecondaryOnly
+			ClassIcon pyro_scorchshot				
+			
+			Item "The Scorch Shot"	
+			Item "The Flamboyant Flamenco"
+		}
+		
+		T_TFBot_Pyromania_BeggarsBazooka_Soldier
+		{
+			Name "Homeless Soldier"
+		
+			Class Soldier
+			//Attributes HoldFireUntilFullReload
+			Classicon soldier_beggars
+			
+			Item "The Beggar's Bazooka"
+			Item "The Captain's Cocktails"
+			Item "The Helmet Without a Home"
+			ItemAttributes
+			{
+				ItemName "The Beggar's Bazooka"
+				"can overload" -1 // No self overload
+			}
+		}			
+		
+		
+		T_TFBot_Pyromania_UrbanProfessional_Sniper
+		{
+			Name "Urban Sniper"		
+		
+			Class Sniper
+			Skill Hard
+			MaxVisionRange 3000
+			ClassIcon sniper_liquidator
+			
+			Item "The Hitman's Heatmaker"
+			Item "The Cleaner's Carbine"	
+			Item "Liquidator's Lid"	
+
+		}			
+
+// JUNE 27 2012 //////////////////////////////////////////////
+
+		T_TFBot_JUNE272012_MedievalMedic_Medic
+		{
+			Name "Crusader Medic"		
+			WeaponRestrictions PrimaryOnly
+			
+			Class Medic
+			ClassIcon medic_medieval
+			
+			Item "Berliner's Bucket Helm"					
+			Item "The Crusader's Crossbow"
+			Item "The Amputator"
+
+			ItemAttributes
+			{
+				ItemName "The Crusader's Crossbow"
+				"Reload time increased" 1.66 // Increased to old speed
+			}	
+			ItemAttributes
+			{
+				ItemName "The Amputator"
+				"damage penalty" 1.0 //counteract old downside
+				"health regen" 0 //counteract regen bonus
+				"health regen" 1				
+				//provide on active on this weapon
+			}			
+
+		}
+	
+// TRIAD (AUGUST 2 2012) ///////////////////////////////
+
+		T_TFBot_Triad_Gullotine_Scout
+		{
+			Name "Triad Scout"
+		
+			Class Scout
+			ClassIcon scout_cleaver
+			Skill Hard
+			Item "The Flying Guillotine"	
+			Item "The Fed-Fightin' Fedora"
+			WeaponRestrictions SecondaryOnly
+		}	
+		
+		//RTR does not work
+		T_TFBot_Triad_RedTapeRecorder_Spy
+		{
+			Name "Triad Spy"
+
+			Class Spy
+			Skill Expert
+		
+			Item "The Red-Tape Recorder"
+			Item "Cosa Nostra Cap"
+		}	
+
+		T_TFBot_Triad_Neon_Pyro
+		{
+			Name "Triad Pyro"		
+		
+			Class Pyro
+			ClassIcon pyro_neonsign
+			Skill Hard		
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Neon Annihilator"	
+			Item "The Attendant"
+		}
+		
+		T_TFBot_Triad_Heater_Heavy
+		{
+			Name "Triad Heavy"
+		
+			Class Heavyweapons
+			ClassIcon heavy_heater
+			
+			Item "The Huo Long Heatmaker"
+			Item "Capone's Capper"
+		}			
+		
+		
+		
+		
+
+// MANN VS MACHINE (August 15 2012) /////////////////
+
+
+		//Removed projectile penetration
+		T_TFBot_Mvm_GrodbortBraniac_Engineer
+		{
+			Name "Grodbort Engineer"
+		
+			Class Engineer
+			WeaponRestrictions PrimaryOnly
+			Classicon engineer_brainiac
+			
+			Item "The Pomson 6000"		
+			Item "The Eureka Effect"		
+			Item  "The Brainiac Hairpiece"
+			Item "The Brainiac Goggles"	
+		}	
+		
+		// MANN VERSUS MACHINE PLAYER BASED ROBOTS
+		
+		T_TFBot_MVM_Scout
+		{
+			Name "MVM Scout"
+		
+			Class Scout
+			Skill Expert
+			ClassIcon mvm_scout
+			
+			Item "Scout Beanie"
+			Item "Gold Botkiller Scattergun Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Scattergun Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 2.0 // 100% increased damage
+				"projectile penetration" 1 // projectile penetration
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"clip size bonus" 3 // 200% clip size bonus
+				"heal on kill" 100 // +100 Heal on Kill
+			}
+			ItemAttributes
+			{
+				ItemName "Scout Beanie"
+				"attach particle effect" 14 //Scorching flames
+				"set item tint RGB" 3342130 //GREEN
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}
+		
+		T_TFBot_MVM_Soldier
+		{
+			Name "MVM Soldier"
+		
+		
+			Class Soldier
+			Skill Expert
+			Attributes SpawnWithFullCharge
+			ClassIcon mvm_soldier			
+			
+			Item "Chieftain's Challenge"			
+			Item "The Buff Banner"		
+			Item "Gold Botkiller Rocket Launcher Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Rocket Launcher Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 2.0 // 100% increased damage
+				"projectile penetration" 1 // projectile penetration
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"clip size bonus" 3 // 200% clip size bonus
+				"heal on kill" 100 // +100 Heal on Kill
+			}
+			ItemAttributes
+			{
+				ItemName "Chieftain's Challenge"
+				"attach particle effect" 16 //Plasma
+			}	
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}				
+		}
+		
+		T_TFBot_MVM_Pyro
+		{
+			Name "MVM Pyro"
+		
+			Class Pyro
+			Skill Expert
+			ClassIcon mvm_pyro		
+			
+			Item "Gold Botkiller Flame Thrower Mk.I"
+			Item "Madame Dixie"
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Flame Thrower Mk.I"
+				"damage bonus" 2.0 // 100% increased damage
+				"airblast pushback scale" 2 // 100% more airblast force	
+				"heal on kill" 100 // +100 Heal on Kill		
+				"weapon burn time increased" 2 // 100% more burn time	
+			}
+			ItemAttributes
+			{
+				ItemName "Madame Dixie"
+				"attach particle effect" 19 //Circling Heart
+				"set item tint RGB" 16711935 // Pink Paint				
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}
+
+		T_TFBot_MVM_Demoman
+		{
+			Name "MVM Demoman"
+		
+			Class Demoman
+			Skill Expert
+			ClassIcon mvm_demo		
+			
+			Item "Demo Kabuto"
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_GRENADELAUNCHER"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 1.8 // 80% increased damage
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"clip size bonus" 3 // 200% clip size bonus
+				"heal on kill" 100 // +100 Heal on Kill
+				"Projectile speed increased" 2 //100% increased projectile speed
+			}
+			ItemAttributes
+			{
+				ItemName "Demo Kabuto"
+				"attach particle effect" 29 //Stormy Storm
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}		
+		
+		T_TFBot_MVM_Heavy
+		{
+			Name "MVM Heavy"
+			ClassIcon mvm_heavy
+		
+			Class Heavyweapons
+			Skill Expert
+			
+			Item "Officer's Ushanka"	
+			Item "Gold Botkiller Minigun Mk.I"			
+			
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Minigun Mk.I"
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"projectile penetration" 3 // 3 level projectile penetration	
+				"heal on kill" 100 // +100 Heal on Kill			
+			}	
+			ItemAttributes
+			{
+				ItemName "Officer's Ushanka"
+				"attach particle effect" 17 // Sunbeams 
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}
+
+		T_TFBot_MVM_Engineer
+		{
+			Name "MVM Engineer"
+			Skill expert
+			ClassIcon mvm_engineer
+		
+			Class Engineer
+			
+			Item "Engineer's Cap"	
+			Item "The Widowmaker"
+			
+			ItemAttributes
+			{
+				ItemName "The Widowmaker"
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"projectile penetration" 1 // 3 level projectile penetration	
+				"heal on kill" 100 // +100 Heal on Kill			
+			}	
+			ItemAttributes
+			{
+				ItemName "Engineer's Cap"
+				"attach particle effect" 13 // Flaming 
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}
+		
+		T_TFBot_MVM_Engineer_Teleporter
+		{
+			Class Engineer
+			Name "MVM Engineer"
+			Skill Expert
+			TeleportWhere spawnbot
+			Health 500
+			Attributes TeleportToHint
+			ClassIcon mvm_engineer
+			
+			Item "Mining Light"	
+			Item "The Widowmaker"
+			Item "Gold Botkiller Wrench Mk.I"
+			
+			ItemAttributes
+			{
+				ItemName "The Widowmaker"
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"projectile penetration" 1 // 3 level projectile penetration	
+				"heal on kill" 100 // +100 Heal on Kill			
+			}
+			ItemAttributes
+			{
+				ItemName "Mining Light"
+				"attach particle effect" 13 // Flaming 
+			}
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Wrench Mk.I"
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"heal on kill" 100 // +100 Heal on Kill			
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+			
+		}		
+
+
+		
+		
+		T_TFBot_MVM_Medic
+		{
+			Name "MVM Medic"
+		
+			Class Medic
+			Skill Expert
+			Attributes SpawnWithFullCharge				
+			
+			Item "The Kritzkrieg"	
+			Item "Medic Goggles"	
+			ClassIcon mvm_medic
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"ubercharge rate bonus" 2 // 100 ubercharge rate bonus
+				"uber duration bonus" 6 // 6s of duration bonus	
+				"overheal expert" 4 // lv 4 overheal expert
+			}
+			ItemAttributes
+			{
+				ItemName "Medic Goggles"
+				"attach particle effect" 18 // Peace Sign 
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}			
+
+		T_TFBot_MVM_Sniper
+		{
+			Name "MVM Sniper"
+		
+			Class Sniper
+			Skill Expert
+			MaxVisionRange 2500
+			ClassIcon mvm_sniper
+			
+			Item "Desert Marauder"
+			Item "Gold Botkiller Sniper Rifle Mk.I"
+
+			ItemAttributes
+			{
+				ItemName "Gold Botkiller Sniper Rifle Mk.I"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 2.0 // 100% increased damage
+				"projectile penetration" 1 // projectile penetration
+				"SRifle Charge rate increased" 2 // 100% charge rate
+				"explosive sniper shot" 3 // explosive headshot
+				"heal on kill" 100 // +100 Heal on Kill
+			}
+			ItemAttributes
+			{
+				ItemName "Trophy Belt"
+				"attach particle effect" 35 // Smoking
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .75 // 25% Resistance
+				"dmg taken from fire reduced" .75 // 25% Fire Resistance
+				"move speed bonus" 1.1 // 10% move speed bonus
+				"health regen" 4 // 4 HP Regen
+				"increased jump height" 1.2 // 20% Increased Jump Height
+			}			
+		}		
+
+
+	
+	
+// MECHA UPDATE (DECEMBER 20 2012) ////////////////////////////////////
+
+		T_TFBot_Mecha_RescueRanger_Engineer
+		{
+			Name "Rescue Ranger Engineer"
+		
+			Class Engineer
+			WeaponRestrictions PrimaryOnly		
+			ClassIcon engineer_rescueranger
+			
+			Item "The Rescue Ranger"
+			Item "Mining Light"
+		}
+		
+		T_TFBot_Mecha_LooseCannon_Demoman
+		{
+			Name "Loose Cannon Demoman"
+		
+			Class Demoman
+			ClassIcon demo_loosecannon
+			
+			Item "The Loose Cannon"
+			Item "Rimmed Raincatcher"
+			
+			ItemAttributes
+			{
+			ItemName "The Loose Cannon"
+			"grenade launcher mortar mode" -2
+			}
+		}	
+
+		//Vaccinator info copied from robot_standard.pop
+		T_TFBot_Mecha_Medic_Vaccinator_Bullet
+		{
+			Class Medic
+			Skill Expert
+			Item "The Vaccinator"
+			Attributes SpawnWithFullCharge
+			Attributes VaccinatorBullets
+			CharacterAttributes
+			{
+				//"ubercharge rate bonus" 25
+				"heal rate bonus" 1 //Leaving default for now
+				"uber duration bonus" 100
+				"medigun bullet resist passive" 1
+				"medigun bullet resist deployed" 1
+			}
+		}
+
+		T_TFBot_Mecha_Medic_Vaccinator_Blast
+		{
+			Class Medic
+			Skill Expert
+			Item "The Vaccinator MVM"
+			Attributes SpawnWithFullCharge
+			Attributes VaccinatorBlast
+			CharacterAttributes
+			{
+				//"ubercharge rate bonus" 25
+				"heal rate bonus" 1 //Leaving default for now
+				"uber duration bonus" 100
+				"medigun blast resist passive" 1
+				"medigun blast resist deployed" 1
+			}
+		}
+
+		T_TFBot_Mecha_Medic_Vaccinator_Fire
+		{
+			Class Medic
+			Skill Expert
+			Item "The Vaccinator MVM"
+			Attributes SpawnWithFullCharge
+			Attributes VaccinatorFire
+			CharacterAttributes
+			{
+				//"ubercharge rate bonus" 25
+				"heal rate bonus" 1 //Leaving default for now
+				"uber duration bonus" 100
+				"medigun fire resist passive" 1
+				"medigun fire resist deployed" 1
+			}
+		}	
+		
+
+
+
+
+	
+	
+// JULY 10 2013 //////////////////////////////////////////
+		T_TFBot_JUL102013_Milkman_Scout
+		{
+			Name "Special Delivery Scout"
+			
+			Class Scout			
+			Classicon scout_specialdelivery
+
+			Item "The Milkman"
+			Item "The Shortstop"
+			Item "Mad Milk"
+			Item "The Holy Mackerel"			
+		}
+		
+		T_TFBot_JUL102013_TankBuster_Soldier
+		{
+			Name "Tankbuster Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_tankbuster
+			
+			
+			Attributes SpawnWithFullCharge
+			Item "The Grenadier's Softcap"			
+			Item "The Battalion's Backup"					
+			Item "The Black Box"
+			ItemAttributes
+			{
+				ItemName "The Battalion's Backup"
+				"max health additive bonus" 0
+			}			
+		}		
+		
+		T_TFBot_JUL102013_GasJockey_Pyro
+		{
+			Name "Gas Jockey Pyro"
+		
+			Class Pyro
+			ClassIcon pyro_gasjockey
+			WeaponRestrictions PrimaryOnly
+			
+			Item "The Attendant"			
+			Item "The Degreaser"
+			Item "The Powerjack"
+		}		
+		
+		T_TFBot_JUL102013_GasJockey_Powerjack_Pyro
+		{
+			Class Pyro
+			ClassIcon pyro_gasjockey			
+			WeaponRestrictions MeleeOnly
+			
+			Item "The Attendant"			
+			Item "The Degreaser"
+			Item "The Powerjack"
+		}			
+		
+		
+		T_TFBot_JUL102013_CrocOStyle_Sniper
+		{
+			Name "Croc-o-Style Sniper"
+		
+			Class Sniper
+			
+			Skill Hard
+			ClassIcon sniper_sydneysleeper
+			MaxVisionRange 3000					
+			
+			Item "Ol' Snaggletooth"		
+			Item "The Sydney Sleeper"
+			Item "Darwin's Danger Shield"
+			Item "The Bushwacka"	
+		}
+
+		T_TFBot_JUL102013_Saharan_Spy
+		{
+			Name "Saharan Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon spy_saharan
+			
+			Item "The Familiar Fez"			
+			Item "L'etranger"
+			Item "Your Eternal Reward"
+			
+		}
+
+		T_TFBot_JUL102013_ExpertsOrdanance_LochnLoad_Demoman
+		{
+			Name "Expert Ordanance Demoman"
+		
+			Class Demoman
+			ClassIcon demo_expertordanance
+			
+			Item "Scotch Bonnet"			
+			Item "The Loch-n-Load"
+			Item "The Ullapool Caber"		
+		}	
+		
+		T_TFBot_JUL102013_ExpertsOrdanace_Caber_Demoman
+		{
+		
+			Name "Caber Demoman"
+			Class Demoman
+
+			ClassIcon demoknight_caber
+			WeaponRestrictions MeleeOnly				
+			
+			Item "Scotch Bonnet"				
+			Item "The Chargin' Targe"
+			Item "The Ullapool Caber"
+	
+		}
+		
+		T_TFBot_JUL102013_Winger_Scout
+		{
+			Name "Winger Scout"
+			ClassIcon scout_bonkboy
+		
+			Class scout
+			Skill Easy
+			WeaponRestrictions SecondaryOnly
+			
+			Item "The Winger"
+			Item "Bonk Boy"			
+					
+		}		
+		
+		T_TFBot_JUL102013_ClinicalTrial_Medic
+		{
+			Name "Clinician Medic"
+		
+			Class Medic
+			Skill Easy
+			ClassIcon medic_quickfix
+			
+			Item "The Overdose"
+			Item "The Quick-Fix"
+			Item "The Solemn Vow"
+		}
+
+		T_TFBot_JUL102013_ShortCircuit_Engineer
+		{
+			Name "Short Circuit Engineer"
+		
+			Class Engineer
+			WeaponRestrictions SecondaryOnly
+			ClassIcon engineer_shortcircuit
+			
+			Item "The Short Circuit"
+			Item "The Deus Specs"
+		}
+
+		T_TFBot_JUL102013_Grodbort_Soldier
+		{
+			Name "Grodbort Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_pith
+			Item "The Cow Mangler 5000"
+			Item "The Righteous Bison"
+			Item "Lord Cockswain's Novelty Mutton Chops and Pipe"		
+			Item "Lord Cockswain's Pith Helmet"
+		}	
+		
+// TWO CITIES (NOVEMBER 21 2013) ////////////////////////////////////	
+
+		T_TFBot_TwoCities_BabyFace_Scout
+		{
+			Name "Babyface Blaster Scout"
+			ClassIcon scout_fedfightinfedora
+		
+		
+			Class Scout
+			Skill Easy
+			Attributes SpawnWithFullCharge				
+			
+			Item "Baby Face's Blaster"		
+			Item "Pretty Boy's Pocket Pistol"
+			Item "Dillinger's Duffel"
+			Item "The Fed-Fightin' Fedora"			
+		
+		}
+		
+		T_TFBot_TwoCities_LibertyLauncher_Soldier
+		{
+			Name "Liberty Launcher Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_jeepcap
+			Item "The Liberty Launcher"
+			Item "The Reserve Shooter"
+			Item "The Market Gardener"		
+			Item "Jumper's Jeepcap"
+			ItemAttributes			
+			{
+				ItemName "The Liberty Launcher"		
+				"clip size penalty" .75 //Old clip size penalty
+				"damage penalty" 1.0 // Counteract new damage penalty
+				"rocket jump damage reduction" 1.0 // Counteract new bonus 
+			}		
+		}	
+
+		T_TFBot_TwoCities_MedievalMedic_Medic
+		{
+			Name "Crusader Medic"
+		
+			Class Medic
+			WeaponRestrictions PrimaryOnly	
+			ClassIcon medic_medieval
+			
+			Item "Berliner's Bucket Helm"					
+			Item "The Crusader's Crossbow"
+			Item "The Amputator"
+			
+		}
+
+	// TWOCITIES PLAYERBASED
+
+		T_TFBot_TwoCities_Scout
+		{
+			Name "Two Cities Scout"
+		
+			Class Scout
+			Skill Expert
+			
+			Item "Scout Beanie"
+			Item "Upgradeable TF_WEAPON_SCATTERGUN"
+			ClassIcon twocities_scout			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SCATTERGUN"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 2.0 // 100% increased damage
+				"projectile penetration" 1 // projectile penetration
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"clip size bonus" 3 // 200% clip size bonus
+				"heal on kill" 100 // +100 Heal on Kill
+				"item style override" 1 // Australium
+				"killstreak idleeffect" 5 //Green Sheen	
+			}
+			ItemAttributes
+			{
+				ItemName "Scout Beanie"
+				"attach particle effect" 17 //Sunbeams
+				"set item tint RGB" 16711935 // Pink Paint		
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist						
+
+			}			
+		}
+		
+		T_TFBot_TwoCities_Soldier
+		{
+			Name "TwoCities Soldier"
+		
+		
+			Class Soldier
+			Skill Expert
+			Attributes SpawnWithFullCharge
+			ClassIcon twocities_soldier		
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item "Soldier Samurai Hat"
+			Item "The Buff Banner"		
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 2.0 // 100% increased damage
+				"projectile penetration" 1 // projectile penetration
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"clip size bonus" 3 // 200% clip size bonus
+				"heal on kill" 100 // +100 Heal on Kill
+				"rocket specialist" 4 // Rocket Specialist
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 5 //Green Sheen
+				
+			}
+			ItemAttributes
+			{
+				ItemName "Soldier Samurai Hat"
+				"attach particle effect" 56 //Zap Yellow
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"dmg taken from crit reduced" .1 // 90% crit resist
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"killstreak idleeffect" 5 //Green Sheen
+			}			
+			
+		}
+		
+		T_TFBot_TwoCities_Pyro
+		{
+			Name "TwoCities Pyro"
+		
+			Class Pyro
+			Skill Expert
+			ClassIcon twocities_pyro			
+			
+			
+			Item "Old Guadalajara"
+			Item "Upgradeable TF_WEAPON_FLAMETHROWER"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_FLAMETHROWER"
+				"damage bonus" 2.0 // 100% increased damage
+				"airblast pushback scale" 2 // 100% more airblast force	
+				"heal on kill" 100 // +100 Heal on Kill		
+				"weapon burn time increased" 2 // 100% more burn time	
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 6 //Green Sheen			
+			}
+			ItemAttributes
+			{
+				ItemName "Old Guadalajara"
+				"attach particle effect" 9 //Green Energy
+				"set item tint RGB" 3342130 //GREEN						
+			}
+
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist						
+			}			
+		}
+
+		T_TFBot_TwoCities_Demoman
+		{
+			Name "TwoCities Demoman"
+		
+			Class Demoman
+			Skill Expert
+			ClassIcon twocities_demo			
+			
+			Item "Demoman Hallmark"
+			Item "Upgradeable TF_WEAPON_GRENADELAUNCHER"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 1.8 // 80% increased damage
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"clip size bonus" 3 // 200% clip size bonus
+				"heal on kill" 100 // +100 Heal on Kill
+				"Projectile speed increased" 2 //100% increased projectile speed
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 6 //Green Sheen				
+			}
+			ItemAttributes
+			{
+				ItemName "Demoman Hallmark"
+				"attach particle effect" 10 //Purple Energy
+				"set item tint rgb" 1315840 // Black
+			
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist					
+			}			
+		}		
+		
+		T_TFBot_TwoCities_Heavy
+		{
+			Name "TwoCities Heavy"
+		
+			Class Heavyweapons
+			Skill Expert			
+			ClassIcon twocities_heavy
+			
+			Item "Tough Guy's Toque"	
+			Item "Upgradeable TF_WEAPON_MINIGUN"			
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_MINIGUN"
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"projectile penetration" 3 // 3 level projectile penetration	
+				"heal on kill" 100 // +100 Heal on Kill	
+				"item style override" 1 // Australium		
+				"killstreak idleeffect" 5 //Green Sheen				
+			}	
+			ItemAttributes
+			{
+				ItemName "Tough Guy's Toque"
+				"attach particle effect" 7 // Pink Confetti 
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"dmg taken from crit reduced" .1 // 90% crit resist
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+			}			
+		}
+
+		T_TFBot_TwoCities_Engineer
+		{
+			Name "TwoCities Engineer"
+			Skill expert
+			ClassIcon twocities_engineer		
+		
+			Class Engineer
+			
+			Item "Industrial Festivizer"	
+			Item "The Widowmaker"
+			Item "Upgradeable TF_WEAPON_WRENCH"
+			
+			ItemAttributes
+			{
+				ItemName "The Widowmaker"
+				"fire rate bonus" .6 // 40% fire rate bonus
+				"projectile penetration" 1 // 3 level projectile penetration	
+				"heal on kill" 100 // +100 Heal on Kill					
+			}	
+			ItemAttributes
+			{
+				ItemName "Industrial Festivizer"
+				"attach particle effect" 18 // PeaceSign 
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist					
+			}	
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_WRENCH"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 6 //Green Sheen
+			}
+		}		
+		
+		T_TFBot_TwoCities_Medic
+		{
+			Name "TwoCities Medic"
+		
+			Class Medic
+			Skill Expert
+			Attributes SpawnWithFullCharge	
+			ClassIcon twocities_medic		
+			
+			Item "The Kritzkrieg"	
+			Item "Vintage Tyrolean"	
+
+			ItemAttributes
+			{
+				ItemName "The Kritzkrieg"
+				"ubercharge rate bonus" 2 // 100 ubercharge rate bonus
+				"uber duration bonus" 6 // 6s of duration bonus	
+				"overheal expert" 4 // lv 4 overheal expert
+				"healing mastery" 4 // Highest Level Healing Mastery
+				"killstreak idleeffect" 5 //Green Sheen				
+			}
+			ItemAttributes
+			{
+				ItemName "Vintage Tyrolean"
+				"attach particle effect" 30 // Blizzardy Storm
+				"set item tint RGB" 16777215 // White
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist					
+			}	
+		}			
+
+		T_TFBot_TwoCities_Sniper
+		{
+			Name "Two Cities Sniper"
+		
+			Class Sniper
+			Skill Expert
+			MaxVisionRange 2500
+			ClassIcon twocities_sniper
+			
+			Item "Desert Marauder"
+			Item "Upgradeable TF_WEAPON_SNIPERRIFLE"
+
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SNIPERRIFLE"
+				"Reload time decreased" .4 // 60% increased reload speed
+				"damage bonus" 2.0 // 100% increased damage
+				"projectile penetration" 1 // projectile penetration
+				"SRifle Charge rate increased" 2 // 100% charge rate
+				"explosive sniper shot" 3 // explosive headshot
+				"heal on kill" 100 // +100 Heal on Kill
+				"item style override" 1 // Australium				
+				"killstreak idleeffect" 5 //Green Sheen	
+			}
+			ItemAttributes
+			{
+				ItemName "Desert Marauder"
+				"attach particle effect" 35 // Smoking			
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist					
+			}			
+		}
+		
+		T_TFBot_TwoCities_Spy
+		{
+			Name "Two Cities Spy"
+		
+			Class Spy
+			Skill Expert
+			ClassIcon twocities_spy
+			
+			Item "Fancy Fedora"
+			Item "Upgradeable TF_WEAPON_KNIFE"			
+
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_KNIFE"
+				"item style override" 1 // Australium	
+				"killstreak idleeffect" 5 //Green Sheen	
+			}
+			ItemAttributes
+			{
+				ItemName "Fancy Fedora"
+				"attach particle effect" 64 // Holo glow orange			
+			}
+			CharacterAttributes
+			{
+				"dmg taken from blast reduced" .25 // 75% Resistance
+				"dmg taken from fire reduced" .25 // 75% Fire Resistance
+				"move speed bonus" 1.3 // 30% move speed bonus
+				"health regen" 10 // 10 HP Regen
+				"increased jump height" 1.6 // Increased Jump Height
+				"dmg taken from crit reduced" .1 // 90% crit resist					
+			}			
+		}		
+	
+// Smissmas 2013 ( DECEMBER 20 2013 )		
+
+		T_TFBot_Smissmas2013_TankBuster_Soldier
+		{
+			Name "Tankbuster Soldier"
+		
+			Class Soldier
+			ClassIcon soldier_tankbuster
+			
+			
+			Attributes SpawnWithFullCharge
+			Item "The Grenadier's Softcap"			
+			Item "The Battalion's Backup"					
+			Item "The Black Box"
+			ItemAttributes
+			{
+				ItemName "The Battalion's Backup"
+				"max health additive bonus" 20
+			}			
+		}
+
+
+		T_TFBot_Smissmas_Shogun_Soldier
+		{
+			Name "Conch Samurai"		
+		
+			Class Soldier
+			Attributes SpawnWithFullCharge	
+			Skill Hard		
+			ClassIcon soldier_conch
+			
+			Item "Soldier Samurai Hat"			
+			Item "The Concheror"
+			Item "The Half-Zatoichi"		
+		}		
+
+
+		
+		
+		
+	} // End Template
+} // End Wave Schedule

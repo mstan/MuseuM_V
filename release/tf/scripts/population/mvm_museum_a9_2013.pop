@@ -1,0 +1,801 @@
+#base robot_giant.pop
+#base robot_standard.pop
+#base robot_MuseuMV_Special.pop
+#base robot_MuseuMV_Standard.pop
+#base robot_MuseuMV_2013.pop
+
+// WAVE 666 ITERATION OF MUSEUM V'S 2013. PLAYERS START WITH $7,500 AND BOTS AT $2,500. FOR EVERY DOLLAR A PLAYER EARNS, A BOT WILL EARN TWO.
+
+WaveSchedule
+{
+
+	StartingCurrency		7500
+	RespawnWaveTime 		3
+	CanBotsAttackWhileInSpawnRoom no
+	FixedRespawnWaveTime Yes
+
+	
+	// Sentry Buster
+	Mission // sentry buster
+	{
+		Objective DestroySentries
+
+		InitialCooldown 120
+		Where spawnbot_mission_sentrybuster
+		BeginAtWave 1
+		RunForThisManyWaves 1
+
+		CooldownTime 120            
+
+            TFBot
+			{
+				Template T_TFBot_SentryBuster
+            }
+	}
+	// End Buster
+	
+	//Mission Spy Begin
+	Mission // Spy - $2500
+	{
+		Objective Spy  
+
+		InitialCooldown 180
+		Where spawnbot_mission_spy
+		BeginAtWave 1
+		RunForThisManyWaves 1
+		CooldownTime 180
+		DesiredCount 1
+
+		TFBot
+		{
+			Template T_TFBot_2013_Spy_2500
+		}
+	}	
+	Mission // Sniper - $2500
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 1
+		RunForThisManyWaves 1
+		CooldownTime 210
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_2013_Sniper_2500
+			MaxVisionRange 3000
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+			{
+				Target wave_start_relay_666
+				Action Trigger
+			}
+			DoneOutput
+			{
+				Target wave_finished_relay
+				Action trigger
+			}			
+
+		Checkpoint Yes
+	
+
+
+	
+	//Part 1 - $1000
+
+		WaveSpawn // $2500 Demos
+		{
+			Name "01"
+			Where spawnbot_top
+			TotalCount 15
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			TotalCurrency 200		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Demo_2500
+				Attributes AlwaysCrit
+			}
+		}
+		
+		WaveSpawn // $2500 Pyros
+		{
+			Name "01"
+			Where spawnbot_left
+			Where spawnbot_right
+			TotalCount 15
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			TotalCurrency 200		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Pyro_2500
+				Attributes AlwaysCrit
+				Attributes AlwaysFireWeapon				
+			}
+		}		
+		
+		
+		WaveSpawn //Normal $2500 Soldiers
+		{
+			Name "01"
+			Where spawnbot
+			TotalCount 32
+			MaxActive 8
+			SpawnCount 8
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 7
+			TotalCurrency 300		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Soldier_2500
+				Skill Normal
+			}
+		}
+		
+		WaveSpawn // Giant $2500 Huntsman Snipers
+		{
+			Name "01"
+			Where spawnbot_giant
+			TotalCount 12
+			MaxActive 4
+			SpawnCount 4
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 5
+			TotalCurrency 300		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Sniper_2500_Huntsman_Giant
+			}
+		}
+		
+	//End Part 1 
+		//Players +$1000 [$8500]
+		//Bots +$2000 [$4500]
+		
+		
+	//Part 2 - $600
+
+		WaveSpawn // $4500 Giant Soldier + Giant Medic
+		{
+			Name "02"
+			Where spawnbot_giant
+			TotalCount 20
+			MaxActive 6
+			SpawnCount 2
+			WaitForAllDead "01"
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 4
+			TotalCurrency 600		
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Soldier_4500_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_4500_Giant
+				}
+			}
+		}
+		
+	//End Part 2 
+		//Players +$600 [$9100]
+		//Bots +$1200 [$5700]		
+		
+	//Part 3 - $1500
+
+		WaveSpawn // $5700 Normal Scouts
+		{
+			Name "03"
+			Where spawnbot
+			TotalCount 40
+			MaxActive 10
+			SpawnCount 5
+			WaitForAllDead "02"
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 2
+			TotalCurrency 450		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Scout_5700
+				Skill Normal
+			}
+		}
+		
+		WaveSpawn // Mix between jumping and grounded $5700 Claidheamhmor knights
+		{
+			Name "03"
+			Where spawnbot
+			Where spawnbot_top
+			TotalCount 40
+			MaxActive 10
+			SpawnCount 5
+			WaitForAllDead "02"
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 2
+			TotalCurrency 450		
+		
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Demoknight_5700_Extended_Charge
+					Skill Hard
+					Attributes AutoJump
+						AutoJumpMin 10
+						AutoJumpMax 10					
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Demoknight_5700_Extended_Charge
+					Skill Hard
+				}				
+			}
+		}
+		
+		WaveSpawn //5 $5700 rocket rain soldiers 
+		{
+			Name "03"
+			Where spawnbot_giant
+			TotalCount 5
+			MaxActive 2
+			SpawnCount 1
+			WaitForAllDead "02"
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 30
+			TotalCurrency 300		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Soldier_5700_Giant_Rocket_Rain
+			}
+		}
+		
+		WaveSpawn //Giant $5700 Heavies
+		{
+			Name "03"
+			Where spawnbot_giant
+			TotalCount 5
+			MaxActive 2
+			SpawnCount 1
+			WaitForAllDead "02"
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 30
+			TotalCurrency 300		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Heavy_5700_Giant
+			}
+		}
+		
+	//End Part 3
+		//Players +$1500 [$10600]
+		//Bots +$3000 [$8700]			
+
+
+		
+	//Part 4 - $2200
+
+		WaveSpawn //$8700 scouts
+		{
+			Name "04"
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			RandomSpawn 1
+			TotalCount 80
+			MaxActive 10
+			SpawnCount 5
+			WaitForAllDead "03"
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 8
+			TotalCurrency 900		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Scout_8700
+				Skill Easy
+				Attributes AlwaysCrit
+			}
+		}
+		
+		WaveSpawn //Special Mini Heavies
+		{
+			Name "04"
+			Where spawnbot_top
+			Where spawnbot
+			RandomSpawn 1
+			TotalCount 80
+			MaxActive 10
+			SpawnCount 5
+			WaitForAllDead "03"
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 8
+			TotalCurrency 400		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Heavy_Mini
+				Skill Normal
+				BehaviorModifiers Mobber
+			}
+		}		
+		
+		WaveSpawn // $8700 Giant Demo + Giant Medic
+		{
+			Name "04"
+			Where spawnbot_giant
+			TotalCount 15
+			MaxActive 6
+			SpawnCount 4
+			WaitForAllDead "03"
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 15
+			TotalCurrency 900		
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Demo_8700_Giant_Spammer
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_8700_Giant
+				}
+			}
+		}
+		
+	//End Part 4
+		//Players +$2200 [$12800]
+		//Bots +$4400 [$13100]	
+		
+		
+	//Part 5 - $3250
+
+		WaveSpawn //$13100 Giant Soldier
+		{
+			Name "05a"
+			Where spawnbot_giant
+			TotalCount 40
+			MaxActive 10
+			SpawnCount 5
+			WaitForAllDead "04"
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 10
+			TotalCurrency 750		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Soldier_13100_Giant
+			}
+		}
+		
+		WaveSpawn //$13100 Demoknights
+		{
+			Name "05b"
+			Where spawnbot_top
+			Where spawnbot
+			TotalCount 40
+			MaxActive 5
+			SpawnCount 5
+			WaitForAllDead "04"
+			WaitBeforeStarting 30
+			WaitBetweenSpawns 8
+			TotalCurrency 750		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Demoknight_13100
+				Attributes AlwaysCrit
+			}
+		}
+		
+		WaveSpawn //$13100 Demoknights
+		{
+			Name "05b"
+			Where spawnbot_giant
+			Where spawnbot_top
+			TotalCount 40
+			MaxActive 5
+			SpawnCount 5
+			WaitForAllDead "04"
+			WaitBeforeStarting 55
+			WaitBetweenSpawns 8
+			TotalCurrency 750		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Demoknight_13100
+				Attributes AlwaysCrit
+			}
+		}
+
+		WaveSpawn //Giant Heavy Medics
+		{
+			Name "05c"
+			Where spawnbot_giant
+			TotalCount 20
+			MaxActive 10
+			SpawnCount 5
+			WaitForAllDead "04"
+			WaitBeforeStarting 55
+			WaitBetweenSpawns 10
+			TotalCurrency 1000		
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Heavy_13100_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100_giant
+				}
+			}
+		}
+		
+	//End Part 5
+		//Players +$3250 [$16050]
+		//Bots +$6500 [$19600]	 		
+		
+	//Part 6 - $1050
+
+		WaveSpawn // max heavies
+		{
+			Name "06a"
+			Where spawnbot_right
+			Where spawnbot_left
+			RandomSpawn 1
+			TotalCount 30
+			MaxActive 20
+			SpawnCount 10
+			WaitForAllDead "05c"
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 2
+			TotalCurrency 450		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Heavy_19600
+			}
+		}
+
+		WaveSpawn // Giant $13100 [max] Heavy medic pairs
+		{
+			Name "06b"
+			Where spawnbot_giant
+			TotalCount 8
+			MaxActive 8
+			SpawnCount 2
+			WaitForAllSpawned "06a"
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 30
+			TotalCurrency 600
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Heavy_13100_Giant
+					Attributes AlwaysCrit
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100_giant
+				}
+			}
+		}
+
+	//End Part 6
+		//Players +$1050 [$17100]
+		//Bots +$2100 [$21700]			
+		
+	//Part 7 - $1100
+
+		WaveSpawn // Giant $13100 [max] RocketRain medic pairs
+		{
+			Name "07"
+			Where spawnbot_giant
+			TotalCount 8
+			MaxActive 8
+			SpawnCount 2
+			WaitForAllSpawned "06b"
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 30
+			TotalCurrency 900
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Soldier_13100_Giant_rocketrain //max crit rocket rain
+					Attributes AlwaysCrit
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100_giant
+				}
+			}
+		}
+
+		WaveSpawn //48 total $21700 spies
+		{
+			Name "07"
+			Where spawnbot
+			TotalCount 48
+			MaxActive 8
+			SpawnCount 4
+			WaitForAllDead "06b"
+			WaitBeforeStarting 40
+			WaitBetweenSpawns 5
+			TotalCurrency 200		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Spy_21700
+			}
+		}
+		
+	//End Part 7
+		//Players +$1100 [$17100]
+		//Bots +$2200 [$21700]		
+		
+		
+	//Part 8 - $1400
+
+		WaveSpawn // max burst huntsman
+		{
+			Name "08a"
+			Where spawnbot_top
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			RandomSpawn 1
+			TotalCount 75
+			MaxActive 20
+			SpawnCount 5
+			WaitForAllSpawned "07"
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 1
+			TotalCurrency 300		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Sniper_21700_Huntsman_Burst
+			}
+		}
+		
+		WaveSpawn //critting rocket shotgun soldiers max
+		{
+			Name "08b"
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			RandomSpawn 1
+			TotalCount 75
+			MaxActive 20
+			SpawnCount 5
+			WaitForAllSpawned "08a"
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 1
+			TotalCurrency 300		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Soldier_21700_rocketshotgun			
+				Attributes AlwaysCrit
+			}
+		}
+
+		WaveSpawn // max crit demo
+		{
+			Name "08c"
+			Where spawnbot_top
+			Where spawnbot_left
+			Where spawnbot_right
+			RandomSpawn 1
+			TotalCount 75
+			MaxActive 20
+			SpawnCount 5
+			WaitForAllSpawned "08b"
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 1
+			TotalCurrency 200		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Demo_21700
+			}
+		}
+		
+		WaveSpawn //max pyros with crits
+		{
+			Name "08d"
+			Where spawnbot_left
+			Where spawnbot_right
+			RandomSpawn 1
+			TotalCount 75
+			MaxActive 20
+			SpawnCount 5
+			WaitForAllSpawned "08c"
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 1
+			TotalCurrency 200		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Pyro_21700
+				Attributes AlwaysCrit
+			}
+		}
+
+		WaveSpawn //max heavies with crits
+		{
+			Name "08e"
+			Where spawnbot_left
+			Where spawnbot_right
+			Where spawnbot_top
+			RandomSpawn 1
+			TotalCount 75
+			MaxActive 20
+			SpawnCount 5
+			WaitForAllSpawned "08d"
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 1
+			TotalCurrency 200		
+		
+			TFBot
+			{
+				Template T_TFBot_2013_Heavy_19600
+				Attributes AlwaysCrit
+			}
+		}
+		WaveSpawn //WAVE 08f: 48 total, 22 active, Heavyweapons (Always Crit + Uber medic)
+		{
+			Name "08f"
+			Where spawnbot
+			Where spawnbot_top
+			RandomSpawn 1
+			TotalCount 48
+			MaxActive 22
+			SpawnCount 4
+			WaitForAllSpawned "08b"
+			WaitBeforeStarting 30
+			WaitBetweenSpawns 1
+			TotalCurrency 200		
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Heavy_19600
+					Attributes AlwaysCrit
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+			}
+		}
+
+		WaveSpawn //Giant Heavy Boss  
+		{
+			Name "08g"
+			Where spawnbot_giant
+			TotalCount 21
+			MaxActive 21
+			SpawnCount 1
+			WaitForAllSpawned "08f"
+			TotalCurrency 0
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_2013_Heavy_13100_Giant_RocketMinigun
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}	
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}	
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}	
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}	
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}
+				TFBot
+				{
+					Template T_TFBot_2013_Medic_13100
+				}				
+			}	
+		}
+	}	
+}

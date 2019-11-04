@@ -1,0 +1,2628 @@
+#base robot_giant.pop
+#base robot_standard.pop
+#base robot_MuseuMV_Special.pop
+#base robot_MuseuMV_Standard.pop
+
+//Bots known to work up to a 2.0 scale as of a4
+
+WaveSchedule
+{
+	StartingCurrency 800 //Was $1000
+	RespawnWaveTime 7
+	CanBotsAttackWhileInSpawnRoom no
+	Advanced 1
+
+	//SENTRY BUSTER
+	
+	Mission	// Sentry Busters - all
+	{
+		Objective DestroySentries
+
+		InitialCooldown 15
+		Where spawnbot_mission_sentrybuster
+		BeginAtWave 1
+		RunForThisManyWaves 10
+		CooldownTime 75
+
+            TFBot
+			{
+				Template T_TFBot_SentryBuster
+            }
+	}
+	
+	// SNIPERS
+
+	Mission	// Sniper wave 1
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 1
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_Beta_Sniper
+		}
+	}
+	
+	Mission // Sniper wave 4
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 4
+		RunForThisManyWaves 1
+		CooldownTime 45
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_SniperVsSpy_Sniper
+		}
+	}
+
+
+	Mission // Sniper wave 5
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 5
+		RunForThisManyWaves 1
+		CooldownTime 40
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_SecondCommunity_Shiv_Sniper
+		}
+	}
+
+	Mission // Sniper wave 6
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 6
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 3
+
+		TFBot
+		{
+			Template T_TFBot_Mannconomy_CrocOStyle_Sniper
+		}
+	}	
+	
+	Mission // Sniper wave 8 DESERT
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 8
+		RunForThisManyWaves 1
+		CooldownTime 60
+		DesiredCount 2
+
+
+			TFBot
+			{
+				Template T_TFBot_Uber_DesertMaurauder_Sniper
+			}
+	}
+
+	Mission // Sniper Wave 8 DEUS EX
+	{
+		Objective Sniper
+
+		InitialCooldown 150
+		Where spawnbot_mission_sniper
+		BeginAtWave 8
+		RunForThisManyWaves 1
+		CooldownTime 60
+		DesiredCount 2
+
+			TFBot
+			{
+				Template T_TFBot_DeusEx_Machina_Sniper
+			}
+
+	}
+
+	Mission // Sniper Wave 9 MVM Snipers
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 9
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 1
+
+			TFBot
+			{
+				Template T_TFBot_MVM_Sniper
+			}
+	}
+
+
+	
+	
+	
+	Mission // Sniper Wave 10 TwoCities Sniper
+	{
+		Objective Sniper
+
+		InitialCooldown 120
+		Where spawnbot_mission_sniper
+		BeginAtWave 10
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 1
+
+			TFBot
+			{
+				Template T_TFBot_TwoCities_Sniper
+			}
+
+	}
+
+	// SPIES
+	
+	Mission // Spy wave 1
+	{
+		Objective Spy  
+
+		InitialCooldown 60
+		Where spawnbot_mission_spy
+		BeginAtWave 1
+		RunForThisManyWaves 1
+		CooldownTime 40
+		DesiredCount 1
+
+		TFBot
+		{
+			Template T_TFBot_Beta_Spy
+		}
+	}
+
+	Mission // Spy wave 4
+	{
+		Objective Spy  
+
+		InitialCooldown 60
+		Where spawnbot_mission_spy
+		BeginAtWave 4
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_SniperVsSpy_AmbassadorDeadRinger_Spy
+		}
+	}	
+
+	Mission // Spy wave 6
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 6
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_Mannconomy_Saharan_Spy
+		}
+	}
+	
+	Mission // Spy wave 7
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 7
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 3
+
+		TFBot
+		{
+			Template T_TFBot_Shogun_Spy
+		}
+	}
+
+	Mission // Spy wave 8 MANOFHONOR
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 8
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 1
+
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Uber_ManOfHonor_Spy
+			}
+		}
+	}
+
+	Mission // Spy wave 8 DEUS EX
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 8
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 1
+
+		
+
+		TFBot
+		{
+			Template T_TFBot_DeusEx_Diamondback_Spy
+		}
+	}
+
+	Mission // Spy wave 8 CHRISTMAS2011
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 8
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 1
+
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_AustralianChristmas2011_Spy
+			}
+		}
+	}
+	
+	Mission // Spy wave 9
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 9
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_AustralianChristmas2011_Spy
+		}
+	}	
+
+
+
+	Mission // Spy wave 10
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where spawnbot_mission_spy
+		BeginAtWave 10
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 2
+
+		TFBot
+		{
+			Template T_TFBot_TwoCities_Spy
+		}
+	}	
+	
+	
+	// ENGINEERS
+
+	Mission // Engineer wave 7
+	{
+		Objective Engineer  
+
+		InitialCooldown 30
+		Where spawnbot
+		BeginAtWave 7
+		RunForThisManyWaves 1
+		CooldownTime 45
+		DesiredCount 1
+
+		TFBot
+		{
+			Template T_TFBot_Engineer_Sentry_Teleporter
+			TeleportWhere spawnbot
+			Attributes TeleportToHint
+			Health 600
+			Item "The Jag"
+			Item "Industrial Festivizer"
+		}
+	}
+
+		Mission // Engineer wave 9
+	{
+		Objective Engineer  
+
+		InitialCooldown 30
+		Where spawnbot
+		BeginAtWave 9
+		RunForThisManyWaves 1
+		CooldownTime 45
+		DesiredCount 1
+
+		TFBot
+		{
+			Template T_TFBot_MVM_Engineer_Teleporter
+			TeleportWhere spawnbot
+			Attributes TeleportToHint
+		}
+	}	
+
+
+
+	
+	
+// WAVE 1
+		//PAYOUT $800
+		// BETA - RELEASE
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Description "Beta"
+		Checkpoint Yes
+		
+	WaveSpawn // 15 Scouts (75)
+		{
+			Where spawnbot_top
+			Name "W1_01"
+			TotalCount 15			
+			MaxActive 6								
+			SpawnCount 3	
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 6							
+			TotalCurrency 75	
+				
+			TFBot
+				{
+					Template T_TFBot_Beta_Scout
+				}
+		}
+		
+	WaveSpawn // 15 Pyros (75)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W1_01"
+			TotalCount 8			
+			MaxActive 6							
+			SpawnCount 3									
+			WaitBetweenSpawns 1						
+			TotalCurrency 75	
+				
+				
+				TFBot
+				{
+					Template T_TFBot_Beta_Pyro
+				}		
+		}		
+		
+	WaveSpawn // 1 Giant Soldier (45)
+		{
+			Where spawnbot_giant
+			Name "W1_01"
+			WaitBeforeStarting 0
+			TotalCount 1			
+			MaxActive 1								
+			SpawnCount 1												
+			TotalCurrency 45	
+				
+			TFBot
+				{
+					Template T_TFBot_Beta_Soldier_giant
+				}
+		}
+		
+	WaveSpawn // 18 Soldiers (90)
+		{
+			Where spawnbot_right
+			Where spawnbot_top
+			Name "W1_02"
+			WaitForAllSpawned "W1_01"
+			WaitBeforeStarting 10
+			TotalCount 18 	
+			MaxActive 6
+			SpawnCount 3
+			WaitBetweenSpawns 1							
+			TotalCurrency 90	
+				
+			TFBot
+			{
+				Template T_TFBot_Beta_Soldier
+				Tag nav_prefer_flank_right
+			}
+		}	
+
+	WaveSpawn // 18 Demomen (90)
+		{
+			Where spawnbot_top
+			Where spawnbot_left
+			Name "W1_02"
+			WaitForAllSpawned "W1_01"
+			WaitBeforeStarting 10
+			TotalCount 18 	
+			MaxActive 6
+			SpawnCount 3	 
+			WaitBetweenSpawns 1							
+			TotalCurrency 90	
+				
+			TFBot
+			{
+				Template T_TFBot_Beta_Demoman
+				Tag nav_prefer_flank_left
+			}
+		}	
+		
+		
+		
+	WaveSpawn // 1 Squad 1 Giant RF Demo with 2 medics (100)
+		{
+			Where spawnbot_giant
+			Name "W1_02"	
+			WaitForAllDead "W1_01"
+			TotalCount 3			
+			MaxActive 3								
+			SpawnCount 3
+			
+			TotalCurrency 100
+				
+		Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_Beta_Demoman_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                              
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                               
+				}
+			}
+		}
+
+	WaveSpawn // 1 Giant Pyro (45)
+		{
+			Where spawnbot_giant
+			Name "W1_03"
+			WaitForAllDead "W1_01"
+			WaitBeforeStarting 20 
+			TotalCount 1			
+			MaxActive 1								
+			SpawnCount 1												
+			TotalCurrency 45	
+				
+			TFBot
+			{
+				Template T_TFBot_Beta_Pyro_Giant
+			}
+		}
+
+	WaveSpawn // 20 Heavies (100)
+		{
+			Where spawnbot_left
+			Where spawnbot_right
+			Name "W1_04"
+			Where spawnbot
+			WaitForAllSpawned "W1_02"
+			WaitBeforeStarting 10
+			TotalCount 20			
+			MaxActive 4							
+			SpawnCount 3					
+			WaitBetweenSpawns 5						
+			TotalCurrency 100	
+				
+			TFBot
+			{
+				Template T_TFBot_Beta_Heavy
+			}
+		}
+
+
+	WaveSpawn // 1 Squad 1 Giant Heavy with 4 medics (180)
+		{
+			Where spawnbot_giant
+			WaitForAllDead "W1_03"
+			//WaitBetweenSpawns 30
+			TotalCount 5			
+			MaxActive 5							
+			SpawnCount 3
+			
+			TotalCurrency 180	
+				
+		Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_Beta_Heavyweapons_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+			}
+		}
+	} // END WAVE 1
+		//TOTAL MONEY $1600 + $100 BONUS
+
+// WAVE 2	
+		// PAYOUT $900
+		// GOLD RUSH UPDATE (APRIL 29 2008) - PYRO UPDATE (JUNE 19 2008) 
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Description "Gold Rush & Pyro Update"
+		Checkpoint Yes	
+		
+	WaveSpawn // 10 Fists (40)
+		{
+			Where spawnbot_top
+			WaitBeforeStarting 3
+			Name "W2_01"
+			TotalCount 10			
+			MaxActive 8								
+			SpawnCount 3									
+			WaitBetweenSpawns 1							
+			TotalCurrency 40
+				
+				TFBot
+				{
+					Template T_TFBot_Beta_Heavy
+					WeaponRestrictions MeleeOnly
+				}
+		}
+		
+	WaveSpawn // 20 Shotgun heavies (80)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W2_01"
+			TotalCount 20			
+			MaxActive 8							
+			SpawnCount 3			
+			WaitBetweenSpawns 1							
+			TotalCurrency 80
+				
+				TFBot
+				{
+					Template T_TFBot_Beta_Heavy
+					Classicon heavy_shotgun
+					WeaponRestrictions SecondaryOnly
+				}
+		}
+		
+	WaveSpawn // 15 Heavyweapons (60)
+		{
+			Where spawnbot
+			Name "W2_01"
+			TotalCount 15			
+			MaxActive 15								
+			SpawnCount 6
+			WaitBeforeStarting 40			
+			WaitBetweenSpawns 9							
+			TotalCurrency 60
+				
+				TFBot
+				{
+					Template T_TFBot_Beta_Heavy
+					Skill Easy
+				}
+		}
+		
+	WaveSpawn // 32 Blutsauger Medics (160)
+		{
+			Where spawnbot
+			Where spawnbot_top
+			Name "W2_02"
+			WaitForAllSpawned "W2_01"
+			WaitBeforeStarting 0	
+			TotalCount 32			
+			MaxActive 16								
+			SpawnCount 4									
+			WaitBetweenSpawns 3							
+			TotalCurrency 160	
+				
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic
+					ClassIcon medic_blutsauger
+					WeaponRestrictions PrimaryOnly
+				}
+		}	
+
+	WaveSpawn // 2 Squad with 1 Giant Pyro, 2 Shotgun Pyros, 1 Kritzkrieg Medic (320)
+		{
+			Where spawnbot_giant
+			Name "W2_02"
+			WaitForAllSpawned "W2_01"
+			WaitBeforeStarting 5			
+			TotalCount 8			
+			MaxActive 8								
+			SpawnCount 4										
+			WaitBetweenSpawns 70							
+			TotalCurrency 320	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro_Giant
+					Attributes AlwaysFireWeapon
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_FlareGun_Pyro	
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_FlareGun_Pyro                        
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                              
+				}
+			}
+		}
+
+	WaveSpawn // 1 Squad 1 Giant Heavy with 3 Kritz Medics (120)
+		{
+			Where spawnbot_giant
+			Name "W2_03"
+			WaitForAllDead "W2_02"
+			TotalCount 4			
+			MaxActive 4								
+			SpawnCount 4															
+			TotalCurrency 120
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_Beta_Heavyweapons_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                      
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                      
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                       
+				}
+			}
+		}
+
+	WaveSpawn // 20 Backburner Pyros w/ 25% crit chance (120)
+		{
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+			WaitForAllSpawned "W2_03"
+			WaitBeforeStarting 15
+			TotalCount 20			
+			MaxActive 16								
+			SpawnCount 4									
+			WaitBetweenSpawns 3							
+			TotalCurrency 120	
+				
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro
+					Attributes AlwaysFireWeapon				
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro	
+					Attributes AlwaysFireWeapon				
+				}
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro
+					Attributes AlwaysFireWeapon				
+				}				
+				TFBot
+				{
+					Template T_TFBot_PyroUpdate_Backburner_Pyro
+					Attributes AlwaysCrit	
+					Attributes AlwaysFireWeapon				
+				}
+			}
+		}		
+	} 	// END WAVE 2	
+			//TOTAL MONEY $2500 + $200 BONUS	
+
+//WAVE 3	
+	// PAYOUT $900
+	// HEAVY UPDATE (AUGUST 19 2008) - SCOUT UPDATE (FEBRUARY 24 2009)
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Description "Heavy & Scout Update"
+		Checkpoint Yes
+		
+	WaveSpawn // 36 Natascha Heavies (180)
+		{
+			Name "W3_01"
+			Where spawnbot
+			Where spawnbot_left
+			Where spawnbot_right
+			TotalCount 36		
+			MaxActive 12								
+			SpawnCount 4					
+			WaitBetweenSpawns 1						
+			TotalCurrency 180	
+				
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy
+					Skill Easy
+				}
+		}
+		
+	WaveSpawn // 2 Squad 1 Giant Natascha Heavy with 2 Kritz Medics and 1 Uber (160)
+		{
+			Where spawnbot_giant
+			Name "W3_02"
+			WaitForAllSpawned "W3_01"
+			TotalCount 8			
+			MaxActive 4								
+			SpawnCount 4									
+			WaitBetweenSpawns 30				
+			TotalCurrency 160	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                            
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                          
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic
+				}
+			}
+		}
+	
+	WaveSpawn // 3 Super Scouts (60)
+		{
+			Name "W3_03"
+			WaitForAllSpawned "W3_02"
+			Where spawnbot_giant						
+			TotalCount 3			
+			MaxActive 3								
+			SpawnCount 1
+			WaitBetweenSpawns 10				
+			TotalCurrency 60
+				
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout_Giant
+				}
+		}
+		
+	WaveSpawn // 3 Natascha Giant (200)
+		{
+			Name "W3_04"
+			WaitForAllDead "W3_02"
+			Where spawnbot_giant						
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			TotalCurrency 50
+				
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy_Giant
+				}
+		}
+
+	WaveSpawn // 12 FAN Scouts (72)
+		{
+			Name "W3_05"
+			WaitForAllSpawned "W3_03"
+			WaitBeforeStarting 25	
+			Where spawnbot_top						
+			TotalCount 12			
+			MaxActive 8								
+			SpawnCount 3									
+			WaitBetweenSpawns 1							
+			TotalCurrency 150	
+				
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout
+					Tag nav_prefer_flank_right
+				}
+		}
+		
+	WaveSpawn  // 6 Bonk Scouts (48)
+		{			
+			Where spawnbot_left
+			Where spawnbot_right
+			Name "W3_06"		
+			TotalCount 6
+			MaxActive 6
+			SpawnCount 3
+			WaitBetweenSpawns 1				
+			WaitForAllSpawned "W3_04"
+			WaitBeforeStarting 20
+			TotalCurrency 48				
+		
+			
+			TFBot
+			{
+				Template T_TFBot_ScoutUpdate_Bonk_Scout
+			}
+		}
+
+	WaveSpawn // Giant Heavy + Squad (60)
+		{
+			Where spawnbot_giant	
+			Name "W3_07"
+			WaitForAllDead "W3_04"
+			TotalCount 18			
+			MaxActive 6								
+			SpawnCount 6					
+			WaitBetweenSpawns 15							
+			TotalCurrency 60	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy
+				}				
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy
+				}				
+				TFBot
+				{
+					Template T_TFBot_HeavyUpdate_Natascha_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                              
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+			}	
+		}
+		
+	WaveSpawn //  Flare Pyro Squad (60)
+		{
+			Where spawnbot_giant	
+			Name "W3_07"
+			WaitForAllSpawned "W3_06"
+			TotalCount 6			
+			MaxActive 6								
+			SpawnCount 6									
+			WaitBetweenSpawns 15	
+			WaitBeforeStarting 7			
+			TotalCurrency 60	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_FEB022009_Flare_Pyro_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_JUL292008_Backburner_Pyro
+				}				
+				TFBot
+				{
+					Template T_TFBot_JUL292008_Backburner_Pyro
+				}				
+				TFBot
+				{
+					Template T_TFBot_FEB022009_FlareGun_Pyro
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                              
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+			}	
+		}
+
+	WaveSpawn // 3 squad with Giant Bonk Scout (60)
+		{
+			Where spawnbot_giant
+			WaitForAllSpawned "W3_06"
+			TotalCount 6		
+			MaxActive 6								
+			SpawnCount 6									
+			WaitBetweenSpawns 15	
+			WaitBeforeStarting 15			
+			TotalCurrency 60	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Bonk_Scout_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Sandman_Scout
+				}				
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Bonk_Scout
+				}				
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_Sandman_Scout
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout                               
+				}
+				TFBot
+				{
+					Template T_TFBot_ScoutUpdate_FAN_Scout                                  
+				}
+			}	
+		}		
+
+	} // END WAVE 3
+		//TOTAL MONEY $3400 + $300 BONUS
+		
+//WAVE 4
+	// PAYOUT $800
+	// SNIPER VS SPY (MAY 21 2009) - WAR! (DECEMBER 19 2009)
+
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes
+		
+
+	WaveSpawn // 20 Mixed Equalizer and Eyelander Demomen (80)
+		{
+			Where spawnbot_top
+			Where spawnbot_left
+			Where spawnbot_right
+			Name "W4_01"
+			TotalCount 25	
+			WaitBeforeStarting 5			
+			MaxActive 12								
+			SpawnCount 4
+			WaitBetweenSpawns 2
+			TotalCurrency 80	
+				
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_War_Equalizer_Soldier
+				}
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman
+				}
+			}
+		}
+		
+	WaveSpawn // 1 Giant Huntsman Sniper
+		{
+			Where spawnbot		
+			TotalCount 1			
+			MaxActive 1								
+			SpawnCount 1															
+			TotalCurrency 90	
+			
+			TFBot
+			{
+				Template T_TFBot_SniperVsSpy_Huntsman_Sniper_Giant
+			}
+		}		
+		
+	WaveSpawn // 20 Huntsman Snipers (180)
+		{
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W4_01"
+			WaitBeforeStarting 0
+			TotalCount 20			
+			MaxActive 17								
+			SpawnCount 6
+			WaitBetweenSpawns 3	
+			TotalCurrency 180	
+				
+				TFBot
+				{
+					Template T_TFBot_SniperVsSpy_Huntsman_Sniper
+				}
+		}		
+		
+	WaveSpawn // 30 Buff DH Soldiers (180)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W4_02"
+			WaitForAllSpawned "W4_01"
+			WaitBeforeStarting 5
+			TotalCount 30			
+			MaxActive 17								
+			SpawnCount 4
+			WaitBetweenSpawns 8	
+			TotalCurrency 180	
+			
+			RandomChoice
+			{			
+				TFBot
+				{
+					Template T_TFBot_War_DirectHitBuffBanner_Soldier
+				}
+				TFBot
+				{
+					Template T_TFBot_War_DirectHitBuffBanner_Soldier
+					Tag spawnbot			
+				}				
+			}
+		}
+		
+	WaveSpawn // 30 flare pyros (180)
+		{
+			Where spawnbot_top
+			Name "W4_02"			
+			WaitForAllSpawned "W4_01"			
+			TotalCount 30			
+			MaxActive 12							
+			SpawnCount 6
+			WaitBeforeStarting 10			
+			WaitBetweenSpawns 2			
+			TotalCurrency 180	
+				
+				TFBot
+				{
+					Template T_TFBot_JUN082009_FlareGun_Pyro
+					Tag nav_prefer_flank_right	
+				}
+		}
+		
+	WaveSpawn // 1 Giant Demoknight or Direct Hit Soldier (90)
+		{
+			Where spawnbot		
+			TotalCount 1			
+			MaxActive 1								
+			SpawnCount 1									
+			WaitBeforeStarting 30															
+			TotalCurrency 90	
+				
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_War_EyelanderCharge_Demoman_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_War_DirectHit_Soldier_Giant                              
+				}
+			}
+		}
+	} // END WAVE 4 
+		//TOTAL MONEY $4200 + $400 BONUS	
+	
+// WAVE 5	
+	//PAYOUT $800
+	// FIRST COMMUNITY CONTRIBUTION UPDATE (MARCH 18 2010) - MAY 19 2010 [BEFORE ENGINEER UPDATE]
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes
+		
+		// WAVE SUPPORT
+		WaveSpawn // Pain Train & Skullcutter Demomen
+		{
+			TotalCurrency 75
+			TotalCount 50
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 15
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+
+			Support 1
+
+			RandomChoice
+			{
+			
+				TFBot
+				{
+					Template T_TFBot_FirstCommunity_PainTrain_Demoman
+				}
+				TFBot
+				{
+					Template T_TFBot_SecondCommunity_Skullcutter_Demoman
+				}
+			}
+		}		
+		
+		
+	WaveSpawn // 40 Flare Pyros (150)
+		{
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W5_01"
+			TotalCount 40			
+			MaxActive 20								
+			SpawnCount 2															
+			WaitBetweenSpawns 1							
+			TotalCurrency 150	
+				
+				TFBot
+				{
+					Template T_TFBot_MAY92010_FlareGun_Pyro
+				}
+		}
+		
+//Tank gone, had 170	
+		
+	WaveSpawn // 30 Demomen (150)
+		{
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			WaitForAllSpawned "W5_02"
+			WaitBeforeStarting 15
+			TotalCount 30			
+			MaxActive 18								
+			SpawnCount 4									
+			WaitBetweenSpawns 5						
+			TotalCurrency 150	
+				
+				TFBot
+				{
+					Template T_TFBot_NonBeta_Demoman
+				}
+		}
+		
+		
+	WaveSpawn // 40 Mix of Buff Banner + DH & Huntsman Snipers (120)
+		{
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			WaitForAllSpawned "W5_02"
+			WaitBeforeStarting 30
+			TotalCount 40			
+			MaxActive 8								
+			SpawnCount 4									
+			WaitBetweenSpawns 3							
+			TotalCurrency 120	
+
+			RandomChoice
+				{	
+					TFBot
+					{
+						Template T_TFBot_War_DirectHitBuffBanner_Soldier
+					}
+					TFBot
+					{
+						Template T_TFBot_SniperVsSpy_Huntsman_Sniper
+					}
+				}	
+		}
+		
+	WaveSpawn // 30 Mix of Homewrecker & Backburner (60)
+		{
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+			WaitForAllSpawned "W5_02"
+			WaitBeforeStarting 30
+			TotalCount 30			
+			MaxActive 10							
+			SpawnCount 3									
+			WaitBetweenSpawns 2							
+			TotalCurrency 60	
+			
+			RandomChoice
+				{
+					TFBot
+					{
+						Template T_TFBot_FirstCommunity_Homewrecker_Pyro
+					}
+					TFBot
+					{
+						Template T_TFBot_119th_Backburner_Pyro
+					}
+				}	
+		}
+	
+	
+	WaveSpawn //  Giant Backburner Pyro, 2 Flare Pyros, and Uber + Kritz medics(75)
+		{
+			Where spawnbot_giant
+			WaitForAllSpawned "W5_02"
+			Name "W5_03"
+			TotalCount 5			
+			MaxActive 5								
+			SpawnCount 5									
+			WaitBeforeStarting 30			
+			TotalCurrency 75	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_119th_Backburner_Pyro_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_MAY92010_FlareGun_Pyro
+				}
+				TFBot
+				{
+					Template T_TFBot_MAY92010_FlareGun_Pyro
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                               
+				}
+			}
+		}
+
+	WaveSpawn // Giant Natascha Heavy, 2 Small Heavies, and Uber + Kritz medics (75)
+		{
+			Where spawnbot_giant
+			TotalCount 5			
+			MaxActive 5								
+			SpawnCount 5									
+			WaitBeforeStarting 90				
+			TotalCurrency 150	
+				
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_APR282010_Natascha_Heavy_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_APR282010_Natascha_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_APR282010_Natascha_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic                                
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic                               
+				}
+			}
+		} // END WAVE
+			//TOTAL MONEY $5000 + $500 BONUS	
+	}
+// WAVE 6
+	// ENGINEER UPDATE(JULY 8 2010) - SCREAM FORTRESS (OCTOBER 27 2010) 
+	// PAYOUT $700
+
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes
+		
+		// WAVE SUPPORT
+		WaveSpawn // GRU Heavies & Vitasaw Medics
+		{
+			TotalCurrency 50
+			TotalCount 50
+			MaxActive 2
+			SpawnCount 2
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 20
+			Where spawnbot_top	
+
+			Support 1
+
+			RandomChoice
+			{
+			
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_GRU_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_VitaSaw_Medic
+				}
+			}
+		}
+
+		// WAVE SUPPORT
+		WaveSpawn // Battle Engineers
+		{
+			TotalCurrency 150
+			TotalCount 100
+			MaxActive 4
+			SpawnCount 3
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 20
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+
+			Support 1
+
+			RandomChoice
+			{
+			
+				TFBot
+				{
+					Template T_TFBot_EngineerUpdate_FrontierJustice_Engineer
+					Attributes AlwaysCrit
+				}
+				TFBot
+				{
+					Template T_TFBot_EngineerUpdate_Gunslinger_Engineer_Battle
+				}
+				TFBot
+				{
+					Template T_TFBot_Hatless_SouthernHospitality_Engineer
+				}
+			}
+		}		
+
+
+		
+		
+	WaveSpawn // 120 Set Bonus Mannconomy Bots (350)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Where spawnbot_top
+			Name "W6_02"
+			WaitBeforeStarting 0
+			TotalCount 120			
+			MaxActive 20								
+			SpawnCount 6									
+			WaitBetweenSpawns 6							
+			TotalCurrency 350	
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_Milkman_Scout
+				}
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_TankBuster_Soldier
+				}	
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_GasJockey_Pyro
+				}
+			}	
+		}	
+		
+	WaveSpawn // 4 Giant Battalion Soldiers (40)
+		{
+			Where spawnbot_giant
+			Name "W6_03"
+			WaitBeforeStarting 0
+			TotalCount 4			
+			MaxActive 2								
+			SpawnCount 1		
+			WaitBetweenSpawns 15			
+			TotalCurrency 40						
+				
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_TankBuster_Soldier_Giant
+			}
+		}
+		
+	WaveSpawn // 12 Large Crit Pyros (60)
+		{
+			Where spawnbot_giant
+			Name "W6_04"
+			WaitForAllDead "W6_03"
+			TotalCount 12			
+			MaxActive 4								
+			SpawnCount 2			
+			WaitBetweenSpawns 13			
+			TotalCurrency 60						
+				
+				TFBot
+				{
+					Template T_TFBot_Mannconomy_GasJockey_Pyro
+					ClassIcon pyro_gasjockey_giant
+					Scale "1.5"
+					Health 650
+					"move speed bonus" .5
+					WeaponRestrictions PrimaryOnly
+					Attributes AlwaysCrit
+				}
+		}
+
+	WaveSpawn // 10 Special Delivery Scouts (30)
+		{
+			Where spawnbot_top
+			Name "W6_05"
+			WaitForAllSpawned "W6_03"
+			TotalCount 10			
+			MaxActive 2							
+			SpawnCount 2									
+			WaitBetweenSpawns 12							
+			TotalCurrency 30	
+
+			TFBot
+			{
+				Template T_TFBot_Mannconomy_SpecialDelivery_Scout_Giant
+				Tag nav_prefer_flank_right
+			}
+		}
+		
+	WaveSpawn  // Headless Demoman (120)
+		{			
+			Where spawnbot_giant
+			WaitForAllDead "W6_04"
+			WaitForAllDead	"W6_05"
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 10
+			TotalCurrency 120				
+			
+			TFBot
+			{
+				Template T_TFBot_ScreamFortress_Demoman_Giant
+			}
+		}	
+	} // END WAVE
+				//TOTAL MONEY $5700 + $600 BONUS
+	
+	//WAVE 7
+		// AUSTRALIAN CHRISTMAS (DECEMBER 17 2010) - RIFT
+		// PAYOUT $900
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes
+		
+		// WAVE SUPPORT
+		WaveSpawn // FanoWar Scouts (75)
+		{
+			TotalCurrency 75
+			TotalCount 50
+			MaxActive 8
+			SpawnCount 3
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 20
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+
+			Support 1
+
+				TFBot
+				{
+					Template T_TFBot_Shogun_Fanowar_Scout
+				}
+		}		
+		
+		
+	WaveSpawn // 30 LnL Demos (45)
+		{
+			Where spawnbot_top
+			Where spawnbot
+			Name "W7_01"
+			TotalCount 30			
+			MaxActive 15								
+			SpawnCount 7
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 2						
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_ExpertsOrdanance_LochnLoad_Demoman
+					Attributes AlwaysCrit
+				}
+		}
+		
+	WaveSpawn // 20 Crusader Medics (50)
+		{
+			Where spawnbot	
+			Where spawnbot_left
+			Where spawnbot_right
+			Name "W7_01"
+			TotalCount 20			
+			MaxActive 10								
+			SpawnCount 5									
+			WaitBetweenSpawns 2							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_MedievalMedic_Medic
+					Attributes AlwaysCrit
+				}
+		}
+		
+	WaveSpawn // 40 Brass Beast Heavies (60)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Where spawnbot_top
+			Name "W7_02"
+			WaitForAllSpawned "W7_01"
+			TotalCount 40			
+			MaxActive 14								
+			SpawnCount 7									
+			WaitBetweenSpawns 3						
+			TotalCurrency 60	
+				
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas_HibernatingBear_BrassBeast_Heavy
+					Skill Normal
+				}
+		}
+
+	WaveSpawn // Squad: 1 Giant RapidFire Demo 2 Giant Regen Medics (90)
+		{
+			Where spawnbot_giant
+			Name "W7_03"
+			WaitForAllSpawned "W7_01"
+			TotalCount 3			
+			MaxActive 3								
+			SpawnCount 3															
+			TotalCurrency 90	
+				
+			Squad
+				{
+					TFBot
+					{
+						Template T_TFBot_AustraliumChristmas_Demoman_Giant
+					}
+					TFBot
+					{
+						Template T_TFBot_GoldRush_Medic_Giant
+					}
+					TFBot
+					{
+						Template T_TFBot_Beta_Medic_Giant
+					}
+				}
+		}
+			
+	WaveSpawn // Giant Bear Heavy(90)
+		{
+			Where spawnbot_giant
+			Name "W7_04"
+			WaitForAllDead "W7_03"
+			TotalCount 1			
+			MaxActive 1							
+			SpawnCount 1															
+			TotalCurrency 90	
+				
+					TFBot
+					{
+						Template T_TFBot_AustraliumChristmas_BrassBeast_Heavy_Giant
+					}
+		}	
+		
+	WaveSpawn // 20 Claidheamohmor Demomen Crit (50)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Where spawnbot_giant
+			Name "W7_05"
+			WaitForAllSpawned "W7_03"
+			WaitBeforeStarting 0
+			TotalCount 20			
+			MaxActive 10								
+			SpawnCount 6									
+			WaitBetweenSpawns 2							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_AustraliumChristmas_ClaidheamohmorCharge_Demoman
+					Attributes AlwaysCrit
+				}
+		}
+		
+	WaveSpawn // 20 Crit FOS Heavies (50)
+		{
+			Where spawnbot_top
+			Name "W7_06"
+			WaitForAllSpawned "W7_05"
+			WaitBeforeStarting 0
+			TotalCount 20			
+			MaxActive 15								
+			SpawnCount 7									
+			WaitBetweenSpawns 2						
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_AustraliumChristmas_FistsofSteel_Heavy
+					Attributes AlwaysCrit
+				}
+		}
+		
+	WaveSpawn // 30 Random Melee Bots (60)
+		{
+			Where spawnbot
+			Where spawnbot_top
+			Name "W7_07"
+			WaitForAllSpawned "W7_05"
+			TotalCount 30			
+			MaxActive 15								
+			SpawnCount 8									
+			WaitBetweenSpawns 0						
+			TotalCurrency 60	
+				
+			RandomChoice
+				{
+					TFBot
+					{
+						Template T_TFBot_AustraliumChristmas_BackScratcher_Pyro
+					}
+					TFBot
+					{
+						Template T_TFBot_AustralianChristmas_BostonBasher_Scout
+					}
+					TFBot
+					{
+						Template T_TFBot_AustralianChristmas_CandyCane_Scout
+					}
+					TFBot
+					{
+						Template T_TFBot_AustralianChristmas_MedievalMedic_Medic
+						WeaponRestrictions MeleeOnly
+					}
+					TFBot
+					{
+						Template T_TFBot_AustralianChristmas_HibernatingBear_WarriorsSpirit_Heavy
+						Skill Expert
+					}
+				}	
+		}
+		
+	WaveSpawn // Squad: 1 Giant LochnLoad Rapidfire and Two Giant Medics (90)
+		{
+			Where spawnbot_giant
+			Name "W7_08"
+			WaitForAllDead "W7_04"
+			TotalCount 3			
+			MaxActive 3								
+			SpawnCount 3															
+			TotalCurrency 90	
+				
+			Squad
+				{
+					TFBot
+					{
+						Template T_TFBot_AustraliumChristmas_Demoman_Medium
+					}
+					TFBot
+					{
+						Template T_TFBot_Beta_Medic_Giant
+					}
+					TFBot
+					{
+						Template T_TFBot_GoldRush_Medic_Giant
+					}
+				}
+		}
+		
+	WaveSpawn // 20 Zatoichi Demomen (50)
+		{
+			Where spawnbot_right	
+			Name "W7_09"
+			WaitForAllSpawned "W7_08"
+			WaitBeforeStarting 5
+			TotalCount 20			
+			MaxActive 15								
+			SpawnCount 5									
+			WaitBetweenSpawns 1							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_Shogun_HalfZatoichi_Demoman
+					Tag nav_prefer_flank_right
+				}
+		}
+		
+	WaveSpawn // 20 Shogun Soldiers(40)
+		{
+			Where spawnbot_left	
+			Name "W7_10"
+			WaitForAllSpawned "W7_08"
+			WaitBeforeStarting 5
+			TotalCount 20			
+			MaxActive 15								
+			SpawnCount 5									
+			WaitBetweenSpawns 1							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_Shogun_Soldier
+					WeaponRestrictions PrimaryOnly
+					Tag nav_prefer_flank_left
+				}
+		}
+		
+	WaveSpawn // 5 Squads of 2x SunStick Scouts + 1x SVF Pyro(40)
+		{
+			Where spawnbot
+			Where spawnbot_top
+			Name "W7_11"
+			WaitForAllSpawned "W7_08"
+			WaitBeforeStarting 15
+			TotalCount 30			
+			MaxActive 18								
+			SpawnCount 3									
+			WaitBetweenSpawns 1							
+			TotalCurrency 40	
+				
+				
+			Squad
+			{			
+				TFBot
+				{
+					Template T_TFBot_Rift_SunOnAStick_Scout
+				}
+				TFBot
+				{
+					Template T_TFBot_RIFT_SharpenedVolcanoFragment_Pyro
+				}
+				TFBot
+				{
+					Template T_TFBot_Rift_SunOnAStick_Scout
+				}
+			}
+		}
+		
+	WaveSpawn // 2 Squads: 1 Giant Deflector Heavy 2 Giant Regen Medics (120)
+		{
+			Where spawnbot_giant
+			Name "W7_12"
+			WaitForAllDead "W7_08"
+			TotalCount 6			
+			MaxActive 6								
+			SpawnCount 3
+			WaitBetweenSpawns 20
+			TotalCurrency 120	
+				
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_APR282010_Natascha_Heavy_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_GoldRush_Medic_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_Beta_Medic_Giant
+				}
+			}
+		}
+	} // END WAVE		
+		//TOTAL MONEY $6500 + $700 BONUS
+		
+	//WAVE 8
+		// UBER UPDATE (JUNE 23 2011) -  AUSTRALIAN CHRISTMAS 2011 (DECEMBER 15 2011) 
+		// PAYOUT $900
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes
+		
+		// WAVE SUPPORT
+		WaveSpawn // Quick-Fix Medics
+		{
+			TotalCurrency 75
+			TotalCount 50
+			MaxActive 2
+			SpawnCount 2
+			WaitBetweenSpawns 10
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left
+
+			Support 1
+
+				TFBot
+				{
+					Template T_TFBot_Uber_ClinicalTrial_Medic
+				}
+		}
+
+		
+		
+		
+	WaveSpawn // 25 Crit Family Business Heavies ()
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W8_01"
+			TotalCount 30			
+			MaxActive 10								
+			SpawnCount 2									
+			WaitBetweenSpawns 2							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_Uber_FamilyBusiness_Heavy
+					Attributes AlwaysCrit
+				}
+		}
+		
+		WaveSpawn // 25 Bonk Boy (30)
+		{
+			Where spawnbot_top
+			Name "W8_02"
+			WaitBeforeStarting 2	
+			TotalCount 25			
+			MaxActive 18								
+			SpawnCount 4									
+			WaitBetweenSpawns 5							
+			TotalCurrency 60	
+				
+				TFBot
+				{
+					Template T_TFBot_Uber_SodaPopper_Scout
+					Tag nav_prefer_flank_right
+				}
+		}			
+		
+		
+		
+	WaveSpawn // 25 Tomislav Heavies (45)
+		{
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W8_02"
+			WaitForAllSpawned "W8_01"
+			TotalCount 40			
+			MaxActive 20								
+			SpawnCount 3									
+			WaitBetweenSpawns 5							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_Uber_Tomislav_Heavy
+					//Attributes AlwaysCrit
+				}
+		}
+		
+
+				
+
+	WaveSpawn // Squad: 1 Giant RapidFire Soldier 2 Giant Regen Medics (290)
+		{
+			Where spawnbot_giant
+			Name "W8_03"
+			WaitForAllSpawned "W8_02"
+			TotalCount 3			
+			MaxActive 3								
+			SpawnCount 3															
+			TotalCurrency 290	
+				
+			Squad
+				{
+					TFBot
+					{
+						Template T_TFBot_Uber_LibertyLauncher_Soldier_Giant
+					}
+					TFBot
+					{
+						Template T_TFBot_Uber_ClinicalTrial_Medic
+						Item "Medic Goggles"
+					}
+					TFBot
+					{
+						Template T_TFBot_Uber_ClinicalTrial_Medic
+						Item "Medic Goggles"
+					}
+				}
+		}
+				
+		
+	WaveSpawn // 20 Crit Det Pyros (40)
+		{
+			Where spawnbot_top
+			Where spawnbot_right
+			Name "W8_04"
+			WaitForAllSpawned "W8_03"
+			WaitBeforeStarting 45
+			TotalCount 20			
+			MaxActive 10								
+			SpawnCount 4									
+			WaitBetweenSpawns 4							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_Uber_Detonator_Pyro
+					Attributes AlwaysCrit
+				}
+		}
+		
+	WaveSpawn // 20 Manniversary(40)
+		{
+			Where spawnbot
+			Where spawnbot_left
+			Name "W8_04"
+			WaitForAllSpawned "W8_03"
+			WaitBeforeStarting 45
+			TotalCount 20			
+			MaxActive 10								
+			SpawnCount 4									
+			WaitBetweenSpawns 4							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_Manniversary_Demoman
+					Tag nav_prefer_flank_left
+				}
+		}
+		
+	WaveSpawn // 30 Grodborts (60)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W8_05"
+			WaitForAllSpawned "W8_04"
+			TotalCount 30			
+			MaxActive 20								
+			SpawnCount 5									
+			WaitBetweenSpawns 5							
+			TotalCurrency 60	
+				
+			RandomChoice
+				{
+					TFBot
+					{
+						Template T_TFBot_Grodbort_Soldier
+						WeaponRestrictions PrimaryOnly
+						Skill Expert
+					}
+					TFBot
+					{
+						Template T_TFBot_Grodbort_Soldier
+						WeaponRestrictions SecondaryOnly
+						Skill Expert
+					}
+				}	
+		}
+		
+	WaveSpawn // Squad: 2x 1 Giant Grodbort Soldier and Two Giant Medics (90)
+		{
+			Where spawnbot_giant
+			Name "W8_06"
+			WaitForAllSpawned "W8_05"
+			TotalCount 6			
+			MaxActive 3								
+			SpawnCount 3															
+			TotalCurrency 90	
+				
+			Squad
+				{
+					TFBot
+					{
+						Template T_TFBot_Grodbort_Soldier_Giant
+					}
+					TFBot
+					{
+						Template T_TFBot_Giant_Medic_Regen
+						Item "Medic Goggles"
+					}
+					TFBot
+					{
+						Template T_TFBot_Giant_Medic_Regen
+						Item "Medic Goggles"
+					}
+				}
+		}
+		
+	WaveSpawn // 60 Phlog Pyros (40)
+		{
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left	
+			Name "W8_07"
+			WaitForAllSpawned "W8_06"
+			WaitBeforeStarting 1
+			TotalCount 20			
+			MaxActive 10								
+			SpawnCount 4									
+			WaitBetweenSpawns 4							
+			TotalCurrency 40	
+				
+				TFBot
+				{
+					Template T_TFBot_AustralianChristmas2011_GrodbortMoonMan_Pyro
+					WeaponRestrictions PrimaryOnly
+					Attributes AlwaysCrit
+				}
+		}
+		
+	WaveSpawn // Crit Holiday Punch Heavies (40)
+		{
+			Where spawnbot
+			Where spawnbot_right
+			Where spawnbot_left				
+			Name "W8_08"
+			WaitForAllSpawned "W8_05"
+			WaitBeforeStarting 60
+			TotalCount 30			
+			MaxActive 20								
+			SpawnCount 5									
+			WaitBetweenSpawns 5							
+			TotalCurrency 40	
+				
+						
+			TFBot
+				{
+					Template T_TFBot_AustralianChristmas2011_HolidayPunch_Heavy
+					Attributes AlwaysCrit
+				}
+		}
+
+	WaveSpawn // Giant Pomson Engineers (120)
+		{
+			Where spawnbot_giant
+			Name "W8_09"
+			WaitForAllSpawned "W8_06"
+			TotalCount 2			
+			MaxActive 2								
+			SpawnCount 2
+			WaitBetweenSpawns 20
+			TotalCurrency 120	
+				Squad
+				{
+					TFBot
+					{
+						Template T_TFBot_Grodbort_Engineer_Giant
+						Attributes AlwaysCrit
+					}
+					TFBot
+					{
+						Template T_TFBot_Grodbort_Engineer_Giant
+					}					
+				}
+		}		
+
+		
+		
+		
+
+	} // END WAVE		
+		//TOTAL MONEY $7400 + $800 BONUS
+
+		
+// WAVE 9
+	// PAYOUT $1000
+	// MANN VERSUS MACHINE (AUGUST 15 2012) - MECHA (DECEMBER 20 2012)
+
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes	
+		
+		// WAVE SUPPORT
+		WaveSpawn // Rescue Ranger
+		{
+			TotalCurrency 75
+			TotalCount 100
+			MaxActive 2
+			SpawnCount 2
+			WaitBetweenSpawns 35
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+
+			Support 1
+
+
+			TFBot
+			{
+				Template T_TFBot_Mecha_RescueRanger_Engineer
+				Attributes AlwaysCrit
+			}
+
+		}		
+	
+	
+	
+		WaveSpawn  // Equalizer + Escape Plan Soldiers (250)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W9_01"
+			TotalCount 18			
+			MaxActive 18							
+			SpawnCount 6							
+			WaitBetweenSpawns 1							
+			TotalCurrency 250	
+				
+			Squad
+			{	
+				TFBot
+				{
+					Template T_TFBot_Pyromania_BeggarsBazooka_Soldier
+					Attributes AlwaysCrit
+				}
+				TFBot
+				{
+					Template T_TFBot_Pyromania_Equalizer_Soldier
+				}				
+				TFBot
+				{
+					Template T_TFBot_Pyromania_EscapePlan_Soldier
+				}
+
+			}
+		
+		}
+		
+		WaveSpawn // Giant Huo Long Heavy (120)
+		{
+			Where spawnbot_giant	
+			Name "W9_02"
+			TotalCount 1			
+			MaxActive 1								
+			SpawnCount 1	
+			TotalCurrency 120			
+		
+			TFBot
+			{
+				Template T_TFBot_Triad_Heavy_GiantHeal
+			}		
+		}
+		
+		WaveSpawn // MVM Bots (130)
+		{
+			Where spawnbot_top
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W9_03"
+			WaitforAllDead "W9_02"
+			TotalCount 90			
+			MaxActive 24							
+			SpawnCount 6
+			WaitBetweenSpawns 1				
+			TotalCurrency 130			
+		
+			Squad
+			{
+			
+				TFBot
+				{
+					Template T_TFBot_MVM_Scout
+				}
+				TFBot
+				{
+					Template T_TFBot_MVM_Soldier
+				}	
+				TFBot
+				{
+					Template T_TFBot_MVM_Pyro
+				}	
+				TFBot
+				{
+					Template T_TFBot_MVM_Demoman
+				}	
+				TFBot
+				{
+					Template T_TFBot_MVM_Heavy
+				}	
+				TFBot
+				{
+					Template T_TFBot_MVM_Medic
+				}
+			}
+
+		}
+
+		WaveSpawn //Loose Cannon Demomen (50)
+		{
+			Where spawnbot_top	
+			Name "W9_04"
+			WaitforAllDead "W9_02"
+			TotalCount 30			
+			MaxActive 15							
+			SpawnCount 5	
+			WaitBetweenSpawns 2					
+			TotalCurrency 50			
+		
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Mecha_LooseCannon_Demoman
+				}
+				TFBot
+				{
+					Template T_TFBot_Mecha_LooseCannon_Demoman
+					Attributes AlwaysCrit
+				}				
+			}
+		}
+		
+		WaveSpawn //Scorch Shot Pyros (75)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Name "W9_04"
+			WaitforAllDead "W9_02"
+			TotalCount 30			
+			MaxActive 15							
+			SpawnCount 5	
+			WaitBetweenSpawns 2					
+			TotalCurrency 75			
+		
+		
+			TFBot
+			{
+				Template T_TFBot_ScorchShot_FastShot
+			}
+
+		}
+		
+		WaveSpawn //Scorch Shot Pyro Giant (75)
+		{
+			Where spawnbot_giant	
+			Name "W9_04"
+			WaitforAllSpawned "W9_03"
+			TotalCount 1			
+			MaxActive 1							
+			SpawnCount 1					
+			TotalCurrency 75			
+		
+		
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot
+			}
+		}		
+
+		
+		WaveSpawn // Giant Loose Cannon Demo + Three Giant QF Medics (150)
+		{
+			Where spawnbot_giant
+			Name "W9_04"
+			WaitforAllSpawned "W9_03"
+			WaitBeforeStarting 0
+			TotalCount 4			
+			MaxActive 	4						
+			SpawnCount 4				
+			TotalCurrency 150			
+		
+		
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Mecha_Demo_Giant
+					Attributes AlwaysCrit
+				}
+				TFBot
+				{
+					Template T_TFBot_Uber_ClinicalTrial_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Uber_ClinicalTrial_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Uber_ClinicalTrial_Medic
+				}				
+			}
+		}
+
+	} // END WAVE 
+		//TOTAL MONEY $8250 + $900 BONUS
+		
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+
+		Checkpoint Yes	
+	
+		
+		WaveSpawn // Two Cities Bots (130)
+		{
+			Where spawnbot_right
+			Where spawnbot_left
+			Where spawnbot_top
+			Name "W10_01"
+			TotalCount 140			
+			MaxActive 21							
+			SpawnCount 7	
+			WaitBetweenSpawns 10				
+			TotalCurrency 500	
+
+			Support 1
+		
+			Squad
+			{
+			
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Scout
+				}
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Soldier
+				}	
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Pyro
+				}	
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Demoman
+				}	
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Heavy
+				}	
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Engineer
+				}	
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Medic
+				}
+			}
+
+		}
+
+		WaveSpawn // FINAL BOSS
+		{
+			Where spawnbot_giant	
+			Name "W10_02"
+			TotalCount 1			
+			MaxActive 1							
+			SpawnCount 1				
+			TotalCurrency 0
+
+
+			RandomChoice
+			{
+			
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Soldier_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Demoman_Giant
+				}
+				TFBot
+				{
+					Template T_TFBot_TwoCities_Heavy_Giant
+				}
+					
+			}			
+			
+			
+		}
+		
+
+	} // END WAVE 
+		//TOTAL MONEY $8250 + $900 BONUS
+		
+
+		
+		
+
+	
+			
+		
+		
+} // END WAVE SCHEDULE
